@@ -68,45 +68,41 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 8, ../sass/screen.scss */
+header {
+  height: 51px;
+}
+
+/* line 11, ../sass/screen.scss */
 #site_logo {
   font-size: 30px;
 }
 
-/* line 12, ../sass/screen.scss */
+/* line 15, ../sass/screen.scss */
 #side_nav {
   margin: 0 auto;
-  padding: 0;
-  margin-top: 51px;
+  width: 15%;
+  display: inline-block;
 }
-/* line 16, ../sass/screen.scss */
+/* line 19, ../sass/screen.scss */
 #side_nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 125px;
-  background-color: lightgrey;
-  height: 592px;
 }
 /* line 24, ../sass/screen.scss */
 #side_nav ul li {
   height: 50px;
 }
-/* line 28, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
 #side_nav ul li a {
   display: block;
   color: #222;
   padding: 8px 0 8px 16px;
   text-decoration: none;
+  cursor: pointer;
 }
-/* line 35, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
 #side_nav ul li a:hover {
   background-color: #222;
   color: white;
-}
-
-/* line 42, ../sass/screen.scss */
-#site_footer {
-  background-color: #080808;
-  width: 100%;
-  height: 40px;
 }
