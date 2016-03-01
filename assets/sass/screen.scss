@@ -7,15 +7,18 @@
 
 header{
 	height:51px;
+	img{
+	    margin-top: -10px;
+	}
 }
-#site_logo{
-	font-size:30px;
-}
+
 
 #side_nav{
 	margin: 0 auto;
 	width: 15%;
 	display: inline-block;
+	background-color:#ddd;
+	height:600px;
 	ul {
     	list-style-type: none;
     	margin: 0;
