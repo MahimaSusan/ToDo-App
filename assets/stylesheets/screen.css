@@ -66,3 +66,44 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
+
+/* line 8, ../sass/screen.scss */
+header {
+  height: 51px;
+}
+/* line 10, ../sass/screen.scss */
+header img {
+  margin-top: -10px;
+}
+
+/* line 16, ../sass/screen.scss */
+#side_nav {
+  margin: 0 auto;
+  width: 15%;
+  display: inline-block;
+  background-color: #ddd;
+  height: 600px;
+}
+/* line 22, ../sass/screen.scss */
+#side_nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 27, ../sass/screen.scss */
+#side_nav ul li {
+  height: 50px;
+}
+/* line 29, ../sass/screen.scss */
+#side_nav ul li a {
+  display: block;
+  color: #222;
+  padding: 8px 0 8px 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* line 36, ../sass/screen.scss */
+#side_nav ul li a:hover {
+  background-color: #222;
+  color: white;
+}
