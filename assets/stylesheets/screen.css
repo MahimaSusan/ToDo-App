@@ -107,3 +107,9 @@ header img {
   background-color: #222;
   color: white;
 }
+
+/* line 43, ../sass/screen.scss */
+#partials {
+  display: inline-block;
+  margin-left: 10px;
+}

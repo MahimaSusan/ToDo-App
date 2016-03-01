@@ -1,0 +1,29 @@
+<form name="frm" ng-submit="">
+    <input type="text" name="todo" ng-model="newTodo" required/>
+    <button ng-disabled="frm.$invalid" ng-click="addTodo()">
+        Go
+    </button>
+</form>
+
+<ul>
+    <li ng-repeat="todo in todos">
+        <input ng-model="todo.done" type="checkbox" />
+        <span ng-class="{'done': todo.done}">
+            {{ todo.title }}
+        </span>
+        <div>
+                    <button ng-show="showFirstButton" type="submit"  ng-click="pause();showme=true">
+                        pause
+                    </button>
+                    <button ng-show="!showFirstButton" type="submit"  ng-hide="showremove"ng-click="play(todo.id);showme=false">
+                        play
+                    </button>
+                    <button ng-show="showme; " ng-click="complete();showremove=true">
+                        Complete
+                    </button>
+                    <button  ng-show="!showme; showremove; " ng-click="remove()">
+                        remove
+                    </button>
+                    </div>
+    </li>
+</ul>
