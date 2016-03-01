@@ -40,3 +40,23 @@ header{
 	  }
 	}
 }
+
+#partial{
+	display:inline-block;
+	margin:0 auto;
+	width:80%;
+	h1{
+		font-size:30px;
+		font-weight:400;
+		margin-left:20px;
+	}
+}
+#add_todo{
+	margin:0 auto;
+	box-sizing:border-box;
+
+}
+#add_btn{
+	text-align:center;
+	display: block;
+}

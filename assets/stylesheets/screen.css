@@ -107,3 +107,28 @@ header img {
   background-color: #222;
   color: white;
 }
+
+/* line 44, ../sass/screen.scss */
+#partial {
+  display: inline-block;
+  margin: 0 auto;
+  width: 80%;
+}
+/* line 48, ../sass/screen.scss */
+#partial h1 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-left: 20px;
+}
+
+/* line 54, ../sass/screen.scss */
+#add_todo {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* line 59, ../sass/screen.scss */
+#add_btn {
+  text-align: center;
+  display: block;
+}
