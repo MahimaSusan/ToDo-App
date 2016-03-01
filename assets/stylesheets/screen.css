@@ -83,13 +83,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  background-color: lightgrey;
+  height: 592px;
 }
 /* line 24, ../sass/screen.scss */
 #side_nav ul li {
   height: 50px;
-  border-right: 1px solid #222;
 }
 /* line 28, ../sass/screen.scss */
 #side_nav ul li a {
@@ -102,4 +102,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 #side_nav ul li a:hover {
   background-color: #222;
   color: white;
+}
+
+/* line 42, ../sass/screen.scss */
+#site_footer {
+  background-color: #080808;
+  width: 100%;
+  height: 40px;
 }
