@@ -13,8 +13,6 @@
         </script>
         <script type="text/javascript" src="../assets/js/lib/angular.min.js">
         </script>
-        <script type="text/javascript" src="../assets/js/lib/angular-route.min.js">
-        </script>
         <script type="text/javascript" src="../assets/js/lib/ngStorage.js">
         </script>
       	<script type="text/javascript" src="../assets/js/lib/angular-filter.js">
@@ -25,6 +23,7 @@
         </script>
     </head>
     <body>
+      <notifications-bar class="notifications"></notifications-bar>
         <header>
             <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container-fluid">
@@ -43,10 +42,11 @@
   			<li><a >Activity Logger</a></li>
 		</ul>
        </div>
+       <div id="seperator"></div>
        <div ui-view id="partial"></div>
         <script type="text/javascript" src="../app.js"></script>
-        <script type="text/javascript" src="../controllers/newtodoController.js"></script>
         <script type="text/javascript" src="../routes/todoRoute.js"></script>
+        <script type="text/javascript" src="../controllers/newtodoController.js"></script>
         <script type="text/javascript" src="../services/storageService.js"></script>
     </body>
 </html>

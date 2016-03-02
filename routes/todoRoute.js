@@ -1,6 +1,6 @@
 todoApp.config(function($stateProvider, $urlRouterProvider){
 
-      $urlRouterProvider.otherwise("/newtodo")
+      $urlRouterProvider.otherwise("/newList")
 
       $stateProvider
         .state('newtodo', {
