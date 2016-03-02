@@ -19,6 +19,10 @@ header{
 	display: inline-block;
 	background-color:#ddd;
 	height:600px;
+	position: fixed;
+	left:0;
+	bottom:0;
+	top: 51px;
 	ul {
     	list-style-type: none;
     	margin: 0;
@@ -42,7 +46,20 @@ header{
 }
 #partials{
 	display: inline-block;
-	margin-left:10px;;
+	margin-left:250px;
+
 
 
 }
+.list{
+	height:75px;
+}
+.selected {
+    background-color:lightgrey;
+    color:black;
+    font-weight:bold;
+}
+.strikeItem{
+		text-decoration: line-through;
+		}
+

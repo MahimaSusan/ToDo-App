@@ -83,18 +83,22 @@ header img {
   display: inline-block;
   background-color: #ddd;
   height: 600px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 51px;
 }
-/* line 22, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
 #side_nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 27, ../sass/screen.scss */
+/* line 31, ../sass/screen.scss */
 #side_nav ul li {
   height: 50px;
 }
-/* line 29, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
 #side_nav ul li a {
   display: block;
   color: #222;
@@ -102,14 +106,31 @@ header img {
   text-decoration: none;
   cursor: pointer;
 }
-/* line 36, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 #side_nav ul li a:hover {
   background-color: #222;
   color: white;
 }
 
-/* line 43, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 #partials {
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 250px;
+}
+
+/* line 54, ../sass/screen.scss */
+.list {
+  height: 75px;
+}
+
+/* line 57, ../sass/screen.scss */
+.selected {
+  background-color: lightgrey;
+  color: black;
+  font-weight: bold;
+}
+
+/* line 62, ../sass/screen.scss */
+.strikeItem {
+  text-decoration: line-through;
 }
