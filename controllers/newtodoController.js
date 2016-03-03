@@ -21,8 +21,8 @@ todoApp.controller('newtodoController',function ($window,$scope,$filter,getLocal
 		$scope.newTodo="";
 		$scope.todoCatg="";
 		$scope.todoDate="";
-		$window.alert("sucessfully added new todo");	
-		location.reload();    
+		$window.alert("sucessfully added new todo");
+		location.reload();	   
 	};
 });
 

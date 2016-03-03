@@ -200,3 +200,13 @@ header img {
 .aler_span {
   display: block;
 }
+
+/* line 113, ../sass/screen.scss */
+.new_input.ng-invalid {
+  background-color: pink;
+}
+
+/* line 116, ../sass/screen.scss */
+.new_input.ng-valid {
+  background-color: lightgreen;
+}

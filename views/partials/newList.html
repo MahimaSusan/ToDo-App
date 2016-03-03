@@ -5,31 +5,30 @@
         </h1>
     </div>
     <div id="add_todo">
-    		<form>
+        <form>
             <div class="todo_date">
-                <label id="date" class="new_label">
+                <label class="new_label">
                     Date :
                 </label>
-                <input  name="todoDate"class="new_input" type="text" id="datepicker" ng-model="todoDate" placeholder="select date" required/>
+                <input class="new_input" type="text" id="datepicker" ng-model="todoDate" placeholder="select date" required/>
             </div>
             <div class="new_todo">
-                <label id="todo" class="new_label">
+                <label class="new_label">
                     Todo :
                 </label>
-                <input name="newTodo" class="new_input" type="text" ng-model="newTodo" placeholder="Enter todo" required/>
+                <input class="new_input" type="text" ng-model="newTodo" placeholder="Enter todo" required/>
             </div>
             <div class="new_catg">
-                <label id="todo_catg" class="new_label">
+                <label class="new_label">
                     Todo Category :
                 </label>
-                <input name="todoCatg" class="new_input" type="text" ng-model="todoCatg" placeholder="Enter todo category" required/>
-               
+                <input class="new_input" type="text" ng-model="todoCatg" placeholder="Enter todo category" required/>
             </div>
             <div id="new_btn">
-                <button ng-click="addtodo()" class="btn btn-primary" ng-model="submit_btn">
+                <button ng-click="addtodo()" class="btn btn-primary">
                     addTodo
                 </button>
             </div>
-            </form>
+        </form>
     </div>
 </div>

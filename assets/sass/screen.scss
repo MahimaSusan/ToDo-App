@@ -110,3 +110,9 @@ header{
 	display:block;
 }
 
+.new_input.ng-invalid {
+    background-color:pink;
+}
+.new_input.ng-valid {
+    background-color:lightgreen;
+}
