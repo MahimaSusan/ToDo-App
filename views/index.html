@@ -4,6 +4,7 @@
         <title>
             ToDo-App
         </title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" type="text/css" href="../assets/styleSheets/bootstrap.css"/>
         <link href="../assets/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="../assets/js/lib/jquery-1.11.3.min.js">
@@ -17,10 +18,9 @@
         <script type="text/jacascript" src="../assets/js/lib/angular-route.min.js">
         </script>
        <script type="text/javascript" src="../assets/js/lib/ngStorage.js"></script>
-       
+       <script type="text/javascript" src="../assets/js/lib/jquery-ui.js"></script>
        <script type="text/javascript" src="../assets/js/lib/angular-filter.js"></script>
-       <!-- <script type="text/javascript" src="http://underscorejs.org/underscore-min.js">
-        </script>-->
+     
 
     </head>
     <body>
@@ -42,7 +42,8 @@
   			<li><a ui-sref="activity_logger">Activity Logger</a></li>
 		</ul>
        </div>
-       <div ui-view id="partials"></div>
+       <div id="seperator"></div>
+       <div ui-view id="partial"></div>
 
        <script type="text/javascript" src="../app.js"></script>
        <script type="text/javascript" src="../routes/loggerRoute.js"></script>

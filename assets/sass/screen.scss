@@ -44,9 +44,9 @@ header{
 	  }
 	}
 }
-#partials{
+#partial{
 	display: inline-block;
-	margin-left:250px;
+	margin-left:50px;
 
 
 
@@ -62,4 +62,15 @@ header{
 .strikeItem{
 		text-decoration: line-through;
 		}
+		.playedd{
+			text-decoration: line-through;
+		}
 
+h1{
+	font-size: 30px;
+	font-weight:bold;
+}
+#seperator{
+	display: inline-block;
+	width:16%;
+}

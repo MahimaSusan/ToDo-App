@@ -113,9 +113,9 @@ header img {
 }
 
 /* line 47, ../sass/screen.scss */
-#partials {
+#partial {
   display: inline-block;
-  margin-left: 250px;
+  margin-left: 50px;
 }
 
 /* line 54, ../sass/screen.scss */
@@ -133,4 +133,21 @@ header img {
 /* line 62, ../sass/screen.scss */
 .strikeItem {
   text-decoration: line-through;
+}
+
+/* line 65, ../sass/screen.scss */
+.playedd {
+  text-decoration: line-through;
+}
+
+/* line 69, ../sass/screen.scss */
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* line 73, ../sass/screen.scss */
+#seperator {
+  display: inline-block;
+  width: 16%;
 }
