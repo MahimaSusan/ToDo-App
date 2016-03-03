@@ -81,20 +81,24 @@ header img {
   margin: 0 auto;
   width: 15%;
   display: inline-block;
+  box-sizing: border-box;
   background-color: #ddd;
-  height: 600px;
+  position: fixed;
+  left: 0;
+  top: 51px;
+  bottom: 0;
 }
-/* line 22, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 #side_nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 27, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 #side_nav ul li {
   height: 50px;
 }
-/* line 29, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 #side_nav ul li a {
   display: block;
   color: #222;
@@ -102,8 +106,107 @@ header img {
   text-decoration: none;
   cursor: pointer;
 }
-/* line 36, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 #side_nav ul li a:hover {
   background-color: #222;
   color: white;
+}
+
+/* line 48, ../sass/screen.scss */
+#seperator {
+  display: inline-block;
+  width: 16%;
+}
+
+/* line 52, ../sass/screen.scss */
+#partial {
+  display: inline-block;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 80%;
+  margin-top: 80px;
+}
+
+/* line 59, ../sass/screen.scss */
+#new_head {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  margin-left: 15px;
+}
+/* line 65, ../sass/screen.scss */
+#new_head h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* line 70, ../sass/screen.scss */
+#add_todo {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-top: 25px;
+}
+
+/* line 77, ../sass/screen.scss */
+.todo_date {
+  width: 33%;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+/* line 82, ../sass/screen.scss */
+.new_todo {
+  width: 33%;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+/* line 87, ../sass/screen.scss */
+.new_catg {
+  width: 33%;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+/* line 92, ../sass/screen.scss */
+.new_input {
+  display: block;
+  margin-top: 22px;
+  width: 255px;
+}
+
+/* line 97, ../sass/screen.scss */
+.new_label {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* line 101, ../sass/screen.scss */
+#new_btn {
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* line 106, ../sass/screen.scss */
+#sucess {
+  margin-top: 20px;
+}
+
+/* line 109, ../sass/screen.scss */
+.aler_span {
+  display: block;
+}
+
+/* line 113, ../sass/screen.scss */
+.new_input.ng-invalid {
+  background-color: pink;
+}
+
+/* line 116, ../sass/screen.scss */
+.new_input.ng-valid {
+  background-color: lightgreen;
 }
