@@ -1,0 +1,17 @@
+<div>
+    <div id="new_head">
+        <h1>
+            Todo categories
+        </h1>
+    </div>
+    <div id="catgs_list">
+        <ul class="list-group" ng-repeat="(key, value) in todosArray | groupBy: 'todoCatg'">
+            <li class="list-group-item list-group-item-info li-width">
+                <a ui-sref="todoList.catg({key:key})">
+                    {{key}}
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div ui-view id="catList"></div>
+</div>

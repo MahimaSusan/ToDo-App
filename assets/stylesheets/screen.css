@@ -210,3 +210,28 @@ header img {
 .new_input.ng-valid {
   background-color: lightgreen;
 }
+
+/* line 119, ../sass/screen.scss */
+.li-width {
+  width: 200px;
+}
+
+/* line 122, ../sass/screen.scss */
+#catList {
+  float: right;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #ddd;
+  width: 50%;
+  display: inline-block;
+  margin-top: 75px;
+}
+
+/* line 131, ../sass/screen.scss */
+#catgs_list {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 25px;
+  display: inline-block;
+}
