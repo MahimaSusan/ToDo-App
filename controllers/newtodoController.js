@@ -17,7 +17,6 @@ todoApp.controller('newtodoController',function ($window,$scope,$filter,getLocal
 			completed:false		
 		});
 		getLocalStorage.updateTodos($scope.todosArray);
-		console.log($scope.todosArray);
 		$scope.newTodo="";
 		$scope.todoCatg="";
 		$scope.todoDate="";
