@@ -8,14 +8,27 @@
         </span
     </div>
     <div id="catgs_list">
-        <ul class="list-group" ng-repeat="(key, value) in todosArray | groupBy: 'todoCatg'">
+        <ul class="list-group" ng-repeat="catg in catgArry">
             <li class="list-group-item list-group-item-info li-width">
-                <a ui-sref="todoList.catg({key:key})">
-                    {{key}}
+                <a ui-sref="todoList.catg({key:catg.todoCatg})">
+                    {{catg.todoCatg}}
                 </a>
             </li>
         </ul>
+        <i class="fa fa-plus-circle fa-lg" ng-click="add()">
+          Add List
+        </i>
+        <div class="add_catg" ng-show="newtodos">
+          <form>
+        <label class="new_label">
+            Todo Category :
+        </label>
+        <input class="new_input" type="text" ng-model="todoCatg" placeholder="Enter todo category" required/>
+        <button ng-click="addCatg()" class="btn btn-primary">
+            addCatgry
+        </button>
+      </form>
+      </div>
     </div>
-
     <div ui-view id="catList"></div>
 </div>

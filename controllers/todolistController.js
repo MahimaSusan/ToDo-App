@@ -1,7 +1,21 @@
-todoApp.controller('todolistController',function ($scope,getLocalStorage){
-	$scope.todosArray=getLocalStorage.getTodos();
+todoApp.controller('todolistController',function ($scope,$filter,getLocalStorage){
+	$scope.catgArry=getLocalStorage.getCatgs();
 	$scope.empty=false;
-	if ($scope.todosArray == ""){
+	if ($scope.catgArry == ""){
 		$scope.empty=true;
+	}
+	$scope.newtodos=false;
+	$scope.add=function () {
+		$scope.newtodos=!$scope.newtodos;
+	}
+	$scope.addCatg=function () {
+		if($scope.todoCatg == undefined){
+    	    	return true;
+    	    }
+		$scope.todoCatg=$filter('lowercase')($scope.todoCatg);
+		$scope.catgArry.push({todoCatg:$scope.todoCatg});
+		getLocalStorage.updateCatg($scope.catgArry);
+		$scope.todoCatg="";
+		location.reload();
 	}
 });

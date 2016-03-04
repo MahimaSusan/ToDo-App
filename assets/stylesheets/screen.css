@@ -260,3 +260,8 @@ header img {
 .icon {
   float: right;
 }
+
+/* line 154, ../sass/screen.scss */
+.add_catg {
+  padding: 20px;
+}
