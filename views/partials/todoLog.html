@@ -1,0 +1,36 @@
+<h1>
+    ToDo Logger
+</h1>
+<form name="frm" ng-submit="">
+    <input type="text" name="todo" ng-model="newTodo" required/>
+    <button ng-disabled="frm.$invalid" ng-click="addTodo()">
+        Add ToDo
+    </button>
+</form>
+<ul>
+    <li class = "list" ng-repeat="todo in todosArray"  ng-class="{'selected':$index == selectedRow, strikeItem: todo.done }" ng-click="setClickedRow($index)" >
+        <input ng-model="todo.done" type="checkbox" />
+        <span ng-class="{'done': todo.done}">
+            {{ todo.text }}
+            <div stopwatch todo=todo todosArray=todosArray time="sharedTime">
+            </div>
+        </span>
+    </li>
+</ul>
+<script type="text/ng-template" id="stopwatch.html">
+    <button href="" ng-show ="timerCtrl.play" id="timerPlay" class="played" ng-class = "{playedd: todo.done}" ng-click="timerCtrl.plays();timerCtrl.showme=false">
+        Play
+    </button>
+    <button href=""  ng-show ="!timerCtrl.play" id="timerPause" class="paused"  ng-click="timerCtrl.pauses(timerCtrl.getElapsedMs()); timerCtrl.showme=true">
+        Pause
+    </button>
+    <button ng-show="timerCtrl.showme; " ng-click="timerCtrl.complete(todo.text,timerCtrl.getElapsedMs());timerCtrl.showremove=true">
+        Complete
+    </button>
+    <button  ng-show="!timerCtrl.showme; timerCtrl.showremove=true " ng-click="timerCtrl.remove(todo.text)">
+        remove
+    </button>
+    <div class="timer" >
+        {{timerCtrl.getElapsedMs()}}
+    </div>
+</script>
