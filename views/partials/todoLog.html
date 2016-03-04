@@ -22,15 +22,15 @@
 </ul>
 <script type="text/ng-template" id="stopwatch.html">
     <div class="buttons">
-        <button href="" ng-show ="timerCtrl.play" id="timerPlay" class="played" ng-class = "{playedd: todo.done}" ng-click="timerCtrl.plays();timerCtrl.showme=false">
+        <button href="" ng-show ="timerCtrl.play" id="timerPlay"  class="played" ng-class = "{playedd: todo.done}" ng-click="timerCtrl.plays();timerCtrl.showme=false" ng-disabled ="todo.done">
             <i class="fa fa-play">
             </i>
         </button>
         <button href=""  ng-show ="!timerCtrl.play" id="timerPause" class="paused"  ng-click="timerCtrl.pauses(timerCtrl.getElapsedMs()); timerCtrl.showme=true" >
-            <i class="fa fa-pause" title="complete">
+            <i class="fa fa-pause" >
             </i>
         </button>
-        <button ng-show="timerCtrl.showme; " ng-click="timerCtrl.complete(todo.text,timerCtrl.getElapsedMs());timerCtrl.showremove=true">
+        <button ng-show="timerCtrl.showme; " ng-click="timerCtrl.complete(todo.text,timerCtrl.getElapsedMs());timerCtrl.showremove=true" >
             <i class="fa fa-check-square-o">
             </i>
         </button>
@@ -39,6 +39,7 @@
             </i>
         </button>
     </div>
+ 
     <div class="timer" >
         {{timerCtrl.getElapsedMs()}}
     </div>
