@@ -20,4 +20,6 @@ todoApp.controller('timerController', ['$scope', 'getLocalStorage', '$interval',
     $('.list').on('click', function() {
         $(this).parent().prepend(this);
     });
+     
+
 }]);

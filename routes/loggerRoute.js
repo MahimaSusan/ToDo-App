@@ -6,6 +6,7 @@ todoApp.config(function($stateProvider, $urlRouterProvider) {
     }).state('activity_logger.completedtodos', {
         url: "/completedtodos",
         templateUrl: "./partials/completedTodos.html",
+        controller:"completedtodoController"
     }).state('activity_logger.todolog', {
         url: "/todolog",
         templateUrl: "./partials/todoLog.html",

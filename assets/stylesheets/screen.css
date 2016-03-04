@@ -232,4 +232,35 @@ header img {
 h1 {
   font-size: 30px;
   font-weight: bold;
+  padding-bottom: 20px;
+}
+
+/* line 136, ../sass/screen.scss */
+.completedlist {
+  height: 50px;
+  border-bottom: 1px solid grey;
+}
+
+/* line 141, ../sass/screen.scss */
+.buttons {
+  display: inline-block;
+  float: right;
+}
+
+/* line 145, ../sass/screen.scss */
+.timer {
+  display: inline-block;
+  float: right;
+}
+
+/* line 149, ../sass/screen.scss */
+.list {
+  height: 50px;
+  border-bottom: 1px solid grey;
+}
+
+/* line 153, ../sass/screen.scss */
+.space {
+  padding-left: 40%;
+  display: inline-block;
 }

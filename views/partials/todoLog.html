@@ -2,7 +2,7 @@
     ToDo Logger
 </h1>
 <form name="frm" ng-submit="">
-    <input type="text" name="todo" ng-model="newTodo" required/>
+    <input type="text" name="todo" ng-model="newTodo"/>
     <button ng-disabled="frm.$invalid" ng-click="addTodo()">
         Add ToDo
     </button>
@@ -12,24 +12,33 @@
         <input ng-model="todo.done" type="checkbox" />
         <span ng-class="{'done': todo.done}">
             {{ todo.text }}
+            <p class="space">
+            </p>
+            Time Spent to complete todo: {{todo.time}}
             <div stopwatch todo=todo todosArray=todosArray time="sharedTime">
             </div>
         </span>
     </li>
 </ul>
 <script type="text/ng-template" id="stopwatch.html">
-    <button href="" ng-show ="timerCtrl.play" id="timerPlay" class="played" ng-class = "{playedd: todo.done}" ng-click="timerCtrl.plays();timerCtrl.showme=false">
-        Play
-    </button>
-    <button href=""  ng-show ="!timerCtrl.play" id="timerPause" class="paused"  ng-click="timerCtrl.pauses(timerCtrl.getElapsedMs()); timerCtrl.showme=true">
-        Pause
-    </button>
-    <button ng-show="timerCtrl.showme; " ng-click="timerCtrl.complete(todo.text,timerCtrl.getElapsedMs());timerCtrl.showremove=true">
-        Complete
-    </button>
-    <button  ng-show="!timerCtrl.showme; timerCtrl.showremove=true " ng-click="timerCtrl.remove(todo.text)">
-        remove
-    </button>
+    <div class="buttons">
+        <button href="" ng-show ="timerCtrl.play" id="timerPlay" class="played" ng-class = "{playedd: todo.done}" ng-click="timerCtrl.plays();timerCtrl.showme=false">
+            <i class="fa fa-play">
+            </i>
+        </button>
+        <button href=""  ng-show ="!timerCtrl.play" id="timerPause" class="paused"  ng-click="timerCtrl.pauses(timerCtrl.getElapsedMs()); timerCtrl.showme=true" >
+            <i class="fa fa-pause" title="complete">
+            </i>
+        </button>
+        <button ng-show="timerCtrl.showme; " ng-click="timerCtrl.complete(todo.text,timerCtrl.getElapsedMs());timerCtrl.showremove=true">
+            <i class="fa fa-check-square-o">
+            </i>
+        </button>
+        <button  ng-show="!timerCtrl.showme; timerCtrl.showremove=true " ng-click="timerCtrl.remove(todo.text)">
+            <i class="fa fa-times">
+            </i>
+        </button>
+    </div>
     <div class="timer" >
         {{timerCtrl.getElapsedMs()}}
     </div>

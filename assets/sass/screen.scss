@@ -131,4 +131,27 @@ header{
 h1{
 	font-size: 30px;
 	font-weight:bold;
+	padding-bottom: 20px;
+}
+.completedlist{
+	height: 50px;
+	border-bottom: 1px solid grey;
+
+}
+.buttons{
+display: inline-block;
+float:right;
+}
+.timer{
+	display: inline-block;
+	float:right;
+}
+.list{
+	height: 50px;
+	border-bottom: 1px solid grey;
+}
+.space{
+	padding-left: 40%;
+	display: inline-block;
+
 }
