@@ -116,3 +116,19 @@ header{
 .new_input.ng-valid {
     background-color:lightgreen;
 }
+.selected {
+    background-color:lightgrey;
+    color:black;
+    font-weight:bold;
+}
+.strikeItem{
+		text-decoration: line-through;
+		}
+		.playedd{
+			text-decoration: line-through;
+		}
+
+h1{
+	font-size: 30px;
+	font-weight:bold;
+}

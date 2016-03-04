@@ -210,3 +210,26 @@ header img {
 .new_input.ng-valid {
   background-color: lightgreen;
 }
+
+/* line 119, ../sass/screen.scss */
+.selected {
+  background-color: lightgrey;
+  color: black;
+  font-weight: bold;
+}
+
+/* line 124, ../sass/screen.scss */
+.strikeItem {
+  text-decoration: line-through;
+}
+
+/* line 127, ../sass/screen.scss */
+.playedd {
+  text-decoration: line-through;
+}
+
+/* line 131, ../sass/screen.scss */
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
