@@ -215,8 +215,12 @@ header img {
 .li-width {
   width: 200px;
 }
+/* line 121, ../sass/screen.scss */
+.li-width a:active {
+  color: red;
+}
 
-/* line 122, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 #catList {
   float: right;
   margin: 0 auto;
@@ -224,14 +228,35 @@ header img {
   background-color: #ddd;
   width: 50%;
   display: inline-block;
-  margin-top: 75px;
+  margin-top: 32px;
 }
 
-/* line 131, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 #catgs_list {
   margin: 0 auto;
   box-sizing: border-box;
   padding: 10px;
   margin-top: 25px;
   display: inline-block;
+}
+
+/* line 141, ../sass/screen.scss */
+.li_style {
+  list-style-type: disc;
+}
+
+/* line 144, ../sass/screen.scss */
+.h1_size {
+  font-size: 30px;
+}
+
+/* line 147, ../sass/screen.scss */
+.empty_width {
+  display: inline-block;
+  width: 245px;
+}
+
+/* line 151, ../sass/screen.scss */
+.icon {
+  float: right;
 }

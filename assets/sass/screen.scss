@@ -118,6 +118,9 @@ header{
 }
 .li-width {
   width: 200px;
+	a:active {
+    color: red;
+	}
 }
 #catList {
   float: right;
@@ -126,12 +129,25 @@ header{
   background-color: #ddd;
   width: 50%;
   display: inline-block;
-  margin-top: 75px;
+  margin-top: 32px;
 }
 #catgs_list{
-	    margin: 0 auto;
+	  margin: 0 auto;
     box-sizing: border-box;
     padding: 10px;
     margin-top: 25px;
     display: inline-block;
+}
+.li_style{
+	list-style-type:disc;
+}
+.h1_size{
+	font-size: 30px;
+}
+.empty_width{
+	display: inline-block;
+	width: 245px;
+}
+.icon{
+	float: right;
 }

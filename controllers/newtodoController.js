@@ -14,14 +14,13 @@ todoApp.controller('newtodoController',function ($window,$scope,$filter,getLocal
 			text:$scope.newTodo,
 			todoCatg:$scope.todoCatg,
 			todoDate:$scope.todoDate,
-			completed:false		
+			completed:false
 		});
 		getLocalStorage.updateTodos($scope.todosArray);
 		$scope.newTodo="";
 		$scope.todoCatg="";
 		$scope.todoDate="";
 		$window.alert("sucessfully added new todo");
-		location.reload();	   
+		location.reload();
 	};
 });
-

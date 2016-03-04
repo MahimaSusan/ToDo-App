@@ -1,3 +1,3 @@
-todoApp.controller('catgListController',function ($scope,catgList){
+todoApp.controller('catgListController',function ($scope,catgList,getLocalStorage){
 	$scope.list=catgList;
 });

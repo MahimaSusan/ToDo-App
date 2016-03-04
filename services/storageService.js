@@ -1,9 +1,7 @@
 var storageService = angular.module('storageService', []);
 
 storageService.factory('getLocalStorage', function() {
-
 	var todos = {};
-
 	return {
     	list: todos,
     	updateTodos: function (todosArr) {
@@ -17,6 +15,4 @@ storageService.factory('getLocalStorage', function() {
        		return todos ? todos : [];
     	}
 	};
-
-
 });

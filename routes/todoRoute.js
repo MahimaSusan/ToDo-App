@@ -12,16 +12,16 @@ todoApp.config(function($stateProvider, $urlRouterProvider){
             url: "/todolist",
             templateUrl: "./partials/todoList.html",
             controller:'todolistController'
-        })  
+        })
         .state('todoList.catg',{
           	url: "/:key",
           	templateUrl:"./partials/todos.html",
            	controller:'catgListController',
-            resolve:{            
+            resolve:{
               	catgList: function(catglistSrv,$stateParams){
-               				var catg=catglistSrv.getCatgs($stateParams.key); 
+               				var catg=catglistSrv.getCatgs($stateParams.key);
               				return catg;
             			}
            }
-        })       
+        })
     });
