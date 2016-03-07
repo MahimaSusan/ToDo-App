@@ -40,6 +40,8 @@ todoApp.directive('stopwatch', function() {
                 }
             };
             self.pauses = function() {
+                
+
                 self.play = 1;
                 if (status == 1) {
                     status = 0;

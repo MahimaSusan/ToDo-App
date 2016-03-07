@@ -8,13 +8,16 @@
     </button>
 </form>
 <ul>
-    <li class = "list" ng-repeat="todo in todosArray"  ng-class="{'selected':$index == selectedRow, strikeItem: todo.done }" ng-click="setClickedRow($index)" >
-      <input ng-model="todo.done" type="checkbox" checked disabled />
+    <li  class = "list" ng-repeat="todo in todosArray"  ng-class="{'selected':$index == selectedRow, strikeItem: todo.done }" ng-click="setClickedRow($index)" >
+      <!--<input ng-model="todo.done" type="checkbox"/>-->
+        <span><i class="fa fa-check"></i>
+</span>
         <span ng-class="{'done': todo.done}">
             {{ todo.text }}
-            <p class="space">
+           <p class="space">
             </p>
-            Time Spent to complete todo: {{todo.time}}
+            <!--Time Spent to complete todo: {{todo.time}}-->
+            completed in {{todo.time}}
             <div stopwatch todo=todo todosArray=todosArray time="sharedTime">
             </div>
         </span>
@@ -26,7 +29,7 @@
             <i class="fa fa-play">
             </i>
         </button>
-        <button href=""  ng-show ="!timerCtrl.play" id="timerPause" class="paused"  ng-click="timerCtrl.pauses(timerCtrl.getElapsedMs()); timerCtrl.showme=true" >
+        <button href=""  ng-show ="!timerCtrl.play" id="timerPause" class="paused"  ng-click="timerCtrl.pauses(todo.text,timerCtrl.getElapsedMs()); timerCtrl.showme=true" >
             <i class="fa fa-pause" >
             </i>
         </button>
@@ -39,8 +42,8 @@
             </i>
         </button>
     </div>
- 
-    <div class="timer" >
+    <div class="timer" > Time:
         {{timerCtrl.getElapsedMs()}}
     </div>
 </script>
+
