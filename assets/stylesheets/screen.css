@@ -221,46 +221,59 @@ header img {
 /* line 124, ../sass/screen.scss */
 .strikeItem {
   text-decoration: line-through;
+  color: #006400;
+  background-color: lightgreen;
 }
 
-/* line 127, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 .playedd {
   text-decoration: line-through;
 }
 
-/* line 131, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 h1 {
   font-size: 30px;
   font-weight: bold;
   padding-bottom: 20px;
 }
 
-/* line 136, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .completedlist {
   height: 50px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #808080;
 }
 
-/* line 141, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .buttons {
   display: inline-block;
   float: right;
 }
 
-/* line 145, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 .timer {
   display: inline-block;
   float: right;
 }
 
-/* line 149, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 .list {
   height: 50px;
-  border-bottom: 1px solid grey;
+  border: 1px solid #808080;
+  border-radius: 7px;
 }
 
-/* line 153, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .space {
-  padding-left: 40%;
+  padding-left: 15%;
   display: inline-block;
+}
+
+/* line 161, ../sass/screen.scss */
+ul {
+  margin-top: 3%;
+}
+
+/* line 164, ../sass/screen.scss */
+.fa-times {
+  color: #FF0000;
 }

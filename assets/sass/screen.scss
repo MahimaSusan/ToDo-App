@@ -123,6 +123,8 @@ header{
 }
 .strikeItem{
 		text-decoration: line-through;
+		color: #006400;
+		background-color:lightgreen;
 		}
 		.playedd{
 			text-decoration: line-through;
@@ -135,7 +137,7 @@ h1{
 }
 .completedlist{
 	height: 50px;
-	border-bottom: 1px solid grey;
+	border-bottom: 1px solid #808080;
 
 }
 .buttons{
@@ -148,10 +150,17 @@ float:right;
 }
 .list{
 	height: 50px;
-	border-bottom: 1px solid grey;
+	border: 1px solid #808080;
+	border-radius : 7px;
 }
 .space{
-	padding-left: 40%;
+	padding-left: 15%;
 	display: inline-block;
 
+}
+ul{
+	margin-top: 3%;
+}
+.fa-times{
+	color:#FF0000;
 }

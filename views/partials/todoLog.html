@@ -9,7 +9,7 @@
 </form>
 <ul>
     <li class = "list" ng-repeat="todo in todosArray"  ng-class="{'selected':$index == selectedRow, strikeItem: todo.done }" ng-click="setClickedRow($index)" >
-        <input ng-model="todo.done" type="checkbox" />
+      <input ng-model="todo.done" type="checkbox" checked disabled />
         <span ng-class="{'done': todo.done}">
             {{ todo.text }}
             <p class="space">
@@ -35,7 +35,7 @@
             </i>
         </button>
         <button  ng-show="!timerCtrl.showme; timerCtrl.showremove=true " ng-click="timerCtrl.remove(todo.text)">
-            <i class="fa fa-times">
+            <i class="fa fa-times" id="complete">
             </i>
         </button>
     </div>
