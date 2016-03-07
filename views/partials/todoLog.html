@@ -8,7 +8,7 @@
     </button>
 </form>
 <ul>
-    <li  class = "list" ng-repeat="todo in todosArray"  ng-class="{'selected':$index == selectedRow, strikeItem: todo.done }" ng-click="setClickedRow($index)" >
+    <li class = "list" ng-repeat="todo in todosArray"  ng-class="{'selected':$index == selectedRow, strikeItem: todo.done }" ng-click="setClickedRow($index)" >
       <!--<input ng-model="todo.done" type="checkbox"/>-->
         <span><i class="fa fa-check"></i>
 </span>

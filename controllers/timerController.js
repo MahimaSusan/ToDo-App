@@ -1,4 +1,4 @@
-todoApp.controller('timerController', ['$scope', 'getLocalStorage', '$interval', function($scope, getLocalStorage, $interval) {
+todoApp.controller('timerController', ['$scope', 'getLocalStorage', '$interval',function($scope, getLocalStorage, $interval) {
     $scope.todosArray = getLocalStorage.getTodos();
     $scope.addTodo = function() {
         $scope.todosArray.push({

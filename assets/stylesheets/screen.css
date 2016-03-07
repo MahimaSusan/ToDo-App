@@ -264,30 +264,32 @@ h1 {
   margin-right: 5%;
   margin-left: 5%;
   margin-bottom: 1%;
+  box-shadow: 10px 10px 5px grey;
 }
 
-/* line 162, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 .list:hover {
   background-color: pink;
 }
 
-/* line 165, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 .space {
   padding-left: 10%;
   display: inline-block;
 }
 
-/* line 170, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 ul {
   margin-top: 3%;
 }
 
-/* line 173, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
 .fa-times {
   color: #FF0000;
 }
 
-/* line 176, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 .navbar-inverse {
   background-color: #021302;
+  box-shadow: 10px 10px 5px grey;
 }
