@@ -127,7 +127,12 @@ header img {
   margin-top: 80px;
 }
 
-/* line 61, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
+body {
+  background-color: lightgrey;
+}
+
+/* line 63, ../sass/screen.scss */
 #new_head {
   margin: 0 auto;
   padding: 0;
@@ -135,13 +140,13 @@ header img {
   width: 100%;
   margin-left: 15px;
 }
-/* line 67, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 #new_head h1 {
   font-size: 30px;
   font-weight: 600;
 }
 
-/* line 72, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 #add_todo {
   margin: 0 auto;
   box-sizing: border-box;
@@ -150,113 +155,114 @@ header img {
   margin-top: 25px;
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 .todo_date {
   width: 33%;
   box-sizing: border-box;
   display: inline-block;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 .new_todo {
   width: 33%;
   box-sizing: border-box;
   display: inline-block;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 .new_catg {
   width: 33%;
   box-sizing: border-box;
   display: inline-block;
 }
 
-/* line 94, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 .new_input {
   display: block;
   margin-top: 22px;
   width: 255px;
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .new_label {
   font-size: 20px;
   font-weight: 400;
 }
 
-/* line 103, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 #new_btn {
   display: block;
   text-align: center;
   margin-top: 50px;
 }
 
-/* line 108, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 #sucess {
   margin-top: 20px;
 }
 
-/* line 111, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .aler_span {
   display: block;
 }
 
-/* line 115, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .new_input.ng-invalid {
   background-color: pink;
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 .new_input.ng-valid {
   background-color: lightgreen;
 }
 
-/* line 121, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 .selected {
   background-color: lightgrey;
   color: black;
   font-weight: bold;
 }
 
-/* line 126, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 .strikeItem {
   text-decoration: line-through;
   color: #006400;
   background-color: lightgreen;
 }
 
-/* line 131, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 .playedd {
   text-decoration: line-through;
 }
 
-/* line 135, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 h1 {
   font-size: 30px;
   font-weight: bold;
   padding-bottom: 20px;
+  color: black;
 }
 
-/* line 140, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .completedlist {
   height: 50px;
   border-bottom: 1px solid #808080;
 }
 
-/* line 145, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 .buttons {
   display: inline-block;
   float: right;
   margin-right: 10%;
 }
 
-/* line 150, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 .timer {
   display: inline-block;
   float: right;
 }
 
-/* line 154, ../sass/screen.scss */
+/* line 157, ../sass/screen.scss */
 .list {
   height: 50px;
   border: 1px solid #808080;
@@ -267,29 +273,30 @@ h1 {
   box-shadow: 10px 10px 5px grey;
 }
 
-/* line 163, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 .list:hover {
   background-color: pink;
 }
 
-/* line 166, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 .space {
   padding-left: 10%;
   display: inline-block;
 }
 
-/* line 171, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
 ul {
   margin-top: 3%;
 }
 
-/* line 174, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 .fa-times {
   color: #FF0000;
 }
 
-/* line 177, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 .navbar-inverse {
-  background-color: #021302;
+  background-color: #222;
   box-shadow: 10px 10px 5px grey;
+  border: 1px solid grey;
 }

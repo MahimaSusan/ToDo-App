@@ -55,8 +55,10 @@ header{
 	box-sizing:border-box;
 	width:80%;
 	margin-top:80px;
-    
-	
+
+}
+body{
+	background-color: lightgrey;
 }
 #new_head{
 	margin:0 auto;
@@ -136,6 +138,7 @@ h1{
 	font-size: 30px;
 	font-weight:bold;
 	padding-bottom: 20px;
+	color:black;
 }
 .completedlist{
 	height: 50px;
@@ -175,7 +178,11 @@ ul{
 	color:#FF0000;
 }
 .navbar-inverse{
-	background-color:#021302;
+	background-color:#222;
 	box-shadow: 10px 10px 5px grey;
+	border: 1px solid grey;
 }
+
+ 
+
 
