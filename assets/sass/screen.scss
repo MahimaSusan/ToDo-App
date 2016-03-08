@@ -90,9 +90,15 @@ header{
 	display:inline-block;
 }
 .new_input{
-	display:block;
-	margin-top:22px;
-}
+	display: block;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 18px;
+    border-radius: 11px;
+		padding: 5px;
+		border: 1px solid #a1a1a1;
+	}
+
 .new_label{
 	font-size:20px;
 	font-weight:400;
@@ -102,21 +108,9 @@ header{
 	text-align:center;
 	margin-top:50px;
 }
-#sucess{
-	margin-top:20px;
-}
-.aler_span{
-	display:block;
-}
 
-.new_input.ng-invalid {
-    background-color:pink;
-}
-.new_input.ng-valid {
-    background-color:lightgreen;
-}
 .li-width {
-  width: 200px;
+  width: 240px;
 	a:active {
     color: red;
 	}
@@ -138,21 +132,58 @@ header{
 }
 .h1_size{
 	font-size: 30px;
+	color: #F1AB45;
 }
 .empty_width{
 	display: inline-block;
-	width: 245px;
+	width: 250px;
+	font-size: 20px;
+margin-top: 16px;
 }
 .icon{
 	float: right;
+	color: #222;
 }
   .add_catg{
+		border: 1px solid lightgrey;
 		padding: 20px;
+		    margin: 22px;
 	}
 
 	.catg_btn{
+
 		margin-top: 25px;
 	}
 	.todo_btn{
 		margin-top: 25px;
 	}
+
+.catg_list {
+	height: 37px;
+  font-size: 20px;
+	a{
+		color: #222;
+	}
+	a:hover {
+		color:  grey;
+		text-decoration: none;
+	}
+}
+.selected {
+	font-weight: bold;
+a{
+color: #F1AB45;
+	text-decoration: none;
+}
+}
+.new_catgory{
+	margin-top: 22px;
+}
+.catg_todos{
+padding: 25px;
+}
+.todos{
+	height: 30px;
+	list-style-type: circle;
+	font-size: 20px;
+}

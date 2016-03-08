@@ -174,52 +174,37 @@ header img {
 /* line 92, ../sass/screen.scss */
 .new_input {
   display: block;
-  margin-top: 22px;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 18px;
+  border-radius: 11px;
+  padding: 5px;
+  border: 1px solid #a1a1a1;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 .new_label {
   font-size: 20px;
   font-weight: 400;
 }
 
-/* line 100, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 #new_btn {
   display: block;
   text-align: center;
   margin-top: 50px;
 }
 
-/* line 105, ../sass/screen.scss */
-#sucess {
-  margin-top: 20px;
-}
-
-/* line 108, ../sass/screen.scss */
-.aler_span {
-  display: block;
-}
-
 /* line 112, ../sass/screen.scss */
-.new_input.ng-invalid {
-  background-color: pink;
-}
-
-/* line 115, ../sass/screen.scss */
-.new_input.ng-valid {
-  background-color: lightgreen;
-}
-
-/* line 118, ../sass/screen.scss */
 .li-width {
-  width: 200px;
+  width: 240px;
 }
-/* line 120, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 .li-width a:active {
   color: red;
 }
 
-/* line 124, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 #catList {
   float: right;
   margin: 0 auto;
@@ -229,7 +214,7 @@ header img {
   margin-top: 32px;
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 #catgs_list {
   margin: 0 auto;
   box-sizing: border-box;
@@ -238,25 +223,31 @@ header img {
   display: inline-block;
 }
 
-/* line 139, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 .h1_size {
   font-size: 30px;
+  color: #F1AB45;
 }
 
-/* line 142, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 .empty_width {
   display: inline-block;
-  width: 245px;
+  width: 250px;
+  font-size: 20px;
+  margin-top: 16px;
 }
 
-/* line 146, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .icon {
   float: right;
+  color: #222;
 }
 
-/* line 149, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 .add_catg {
+  border: 1px solid lightgrey;
   padding: 20px;
+  margin: 22px;
 }
 
 /* line 153, ../sass/screen.scss */
@@ -264,7 +255,49 @@ header img {
   margin-top: 25px;
 }
 
-/* line 156, ../sass/screen.scss */
+/* line 157, ../sass/screen.scss */
 .todo_btn {
   margin-top: 25px;
+}
+
+/* line 161, ../sass/screen.scss */
+.catg_list {
+  height: 37px;
+  font-size: 20px;
+}
+/* line 164, ../sass/screen.scss */
+.catg_list a {
+  color: #222;
+}
+/* line 167, ../sass/screen.scss */
+.catg_list a:hover {
+  color: grey;
+  text-decoration: none;
+}
+
+/* line 172, ../sass/screen.scss */
+.selected {
+  font-weight: bold;
+}
+/* line 174, ../sass/screen.scss */
+.selected a {
+  color: #F1AB45;
+  text-decoration: none;
+}
+
+/* line 179, ../sass/screen.scss */
+.new_catgory {
+  margin-top: 22px;
+}
+
+/* line 182, ../sass/screen.scss */
+.catg_todos {
+  padding: 25px;
+}
+
+/* line 185, ../sass/screen.scss */
+.todos {
+  height: 30px;
+  list-style-type: circle;
+  font-size: 20px;
 }
