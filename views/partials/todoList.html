@@ -2,10 +2,15 @@
     <div id="new_head">
         <h1>
             Todo categories
+            <button ng-click="search()" class=" search_btn"><i class="fa fa-search"></i>
+            </button>
+            <input class="search_input" type="text" ng-model="searchTodo" placeholder="search" />
+
         </h1>
         <span class="list-group-item list-group-item-danger empty_width" ng-show="empty">
           Todo list is empty.
         </span
+
     </div>
     <div id="catgs_list" class="categories">
         <ul  >
