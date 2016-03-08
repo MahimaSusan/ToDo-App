@@ -1,25 +1,22 @@
 <div>
-<ul >
-    <h1 class="list-group-item list-group-item-success h1_size">{{list}}
-      <i class="fa fa-plus-circle icon" ng-click="todoForm()">
-      </i>
-  </h1>
-  <span class="list-group-item list-group-item-danger empty_width" ng-show="empty">
-    No todos in {{list}}.
-  </span>
-    <li class="list-group-item list-group-item-warning " ng-repeat="todo in catgtodos ">
-      {{ todo.text }}
-    </li>
-</ul>
+  <h1 class="h1_size">{{list}}
+    <i class="fa fa-plus-circle icon" ng-click="todoForm()">
+    </i>
+</h1>
+<span class="empty_width" ng-show="empty">
+  No todos in {{list}}.
+</span>
+<div class="catg_todos">
+  <ul >
+      <li class="todos" ng-repeat="todo in catgtodos ">
+        {{ todo.text }}
+      </li>
+  </ul>
+</div>
 <div class="add_catg" ng-show="todoform">
-  <!-- <form> -->
-<label class="new_label">
-    Todo :
-</label>
 <input class="new_input" type="text" ng-model="newTodo" placeholder="Enter todo" required/>
 <button ng-click="addtodo()" class="btn btn-primary todo_btn">
     addtodo
 </button>
-<!-- </form> -->
 </div>
 </div>

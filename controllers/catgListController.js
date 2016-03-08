@@ -23,8 +23,7 @@ todoApp.controller('catgListController',function ($scope,$filter,catgList,getLoc
 				});
 				getLocalStorage.updateTodos($scope.todosArray);
 				$scope.newTodo="";
-					$scope.todoform=!$scope.todoform;
-				// location.reload()
-					$state.go('todoList.catg', {}, {reload: true});
+				location.reload()
 	}
+	
 });
