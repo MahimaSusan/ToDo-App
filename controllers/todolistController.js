@@ -16,6 +16,8 @@ todoApp.controller('todolistController',function ($scope,$filter,getLocalStorage
 		$scope.catgArry.push({todoCatg:$scope.todoCatg});
 		getLocalStorage.updateCatg($scope.catgArry);
 		$scope.todoCatg="";
-		location.reload();
+		$scope.newtodos=!$scope.newtodos;
+			$state.go('todoList', {}, {reload: true});
+		// location.reload();
 	}
 });

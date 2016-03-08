@@ -19,15 +19,15 @@
           Add List
         </i>
         <div class="add_catg" ng-show="newtodos">
-          <form>
+          <!-- <form> -->
         <label class="new_label">
             Todo Category :
         </label>
         <input class="new_input" type="text" ng-model="todoCatg" placeholder="Enter todo category" required/>
-        <button ng-click="addCatg()" class="btn btn-primary">
+        <button ng-click="addCatg()" class="btn btn-primary catg_btn">
             addCatgry
         </button>
-      </form>
+      <!-- </form> -->
       </div>
     </div>
     <div ui-view id="catList"></div>

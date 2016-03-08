@@ -92,7 +92,6 @@ header{
 .new_input{
 	display:block;
 	margin-top:22px;
-	width:255px;
 }
 .new_label{
 	font-size:20px;
@@ -126,7 +125,6 @@ header{
   float: right;
   margin: 0 auto;
   padding: 0;
-  background-color: #ddd;
   width: 50%;
   display: inline-block;
   margin-top: 32px;
@@ -137,9 +135,6 @@ header{
     padding: 10px;
     margin-top: 25px;
     display: inline-block;
-}
-.li_style{
-	list-style-type:disc;
 }
 .h1_size{
 	font-size: 30px;
@@ -153,4 +148,11 @@ header{
 }
   .add_catg{
 		padding: 20px;
+	}
+
+	.catg_btn{
+		margin-top: 25px;
+	}
+	.todo_btn{
+		margin-top: 25px;
 	}

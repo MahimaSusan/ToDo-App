@@ -175,63 +175,61 @@ header img {
 .new_input {
   display: block;
   margin-top: 22px;
-  width: 255px;
 }
 
-/* line 97, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 .new_label {
   font-size: 20px;
   font-weight: 400;
 }
 
-/* line 101, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 #new_btn {
   display: block;
   text-align: center;
   margin-top: 50px;
 }
 
-/* line 106, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 #sucess {
   margin-top: 20px;
 }
 
-/* line 109, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 .aler_span {
   display: block;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 .new_input.ng-invalid {
   background-color: pink;
 }
 
-/* line 116, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 .new_input.ng-valid {
   background-color: lightgreen;
 }
 
-/* line 119, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 .li-width {
   width: 200px;
 }
-/* line 121, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 .li-width a:active {
   color: red;
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 #catList {
   float: right;
   margin: 0 auto;
   padding: 0;
-  background-color: #ddd;
   width: 50%;
   display: inline-block;
   margin-top: 32px;
 }
 
-/* line 134, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 #catgs_list {
   margin: 0 auto;
   box-sizing: border-box;
@@ -240,28 +238,33 @@ header img {
   display: inline-block;
 }
 
-/* line 141, ../sass/screen.scss */
-.li_style {
-  list-style-type: disc;
-}
-
-/* line 144, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 .h1_size {
   font-size: 30px;
 }
 
-/* line 147, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 .empty_width {
   display: inline-block;
   width: 245px;
 }
 
-/* line 151, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 .icon {
   float: right;
 }
 
-/* line 154, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 .add_catg {
   padding: 20px;
+}
+
+/* line 153, ../sass/screen.scss */
+.catg_btn {
+  margin-top: 25px;
+}
+
+/* line 156, ../sass/screen.scss */
+.todo_btn {
+  margin-top: 25px;
 }
