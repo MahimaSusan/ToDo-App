@@ -110,7 +110,7 @@ header{
 }
 
 .li-width {
-  width: 240px;
+  width: 333px;
 	a:active {
     color: red;
 	}
@@ -132,13 +132,10 @@ header{
 }
 .h1_size{
 	font-size: 30px;
-	color: #F1AB45;
+
 }
 .empty_width{
-	display: inline-block;
-	width: 250px;
-	font-size: 20px;
-margin-top: 16px;
+	font-size: 18px;
 }
 .icon{
 	float: right;
@@ -161,9 +158,7 @@ margin-top: 16px;
 .catg_list {
 	height: 37px;
   font-size: 20px;
-	a{
-		color: #222;
-	}
+
 	a:hover {
 		color:  grey;
 		text-decoration: none;
@@ -171,8 +166,9 @@ margin-top: 16px;
 }
 .selected {
 	font-weight: bold;
+	color: #3c763d;
+background-color: #dff0d8;
 a{
-color: #F1AB45;
 	text-decoration: none;
 }
 }
@@ -183,7 +179,5 @@ color: #F1AB45;
 padding: 25px;
 }
 .todos{
-	height: 30px;
-	list-style-type: circle;
-	font-size: 20px;
+	font-size: 18px;
 }

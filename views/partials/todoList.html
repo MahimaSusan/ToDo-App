@@ -9,7 +9,7 @@
     </div>
     <div id="catgs_list" class="categories">
         <ul  >
-            <li class="catg_list" ng-repeat="catg in catgArry" ng-class="{'selected':$index == selectedRow}" ng-click="setClickedRow($index)">
+            <li class="list-group-item list-group-item-info li-width catg_list" ng-repeat="catg in catgArry" ng-class="{'selected':$index == selectedRow}" ng-click="setClickedRow($index)">
                 <a ui-sref="todoList.catg({key:catg.todoCatg})" >
                     {{catg.todoCatg}}
                 </a>

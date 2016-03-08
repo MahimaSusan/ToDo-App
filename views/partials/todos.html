@@ -1,14 +1,14 @@
 <div>
-  <h1 class="h1_size">{{list}}
+  <h3 class="h1_size list-group-item list-group-item-success ">{{list}}
     <i class="fa fa-plus-circle icon" ng-click="todoForm()">
     </i>
-</h1>
-<span class="empty_width" ng-show="empty">
+</h3>
+<span class="list-group-item list-group-item-danger empty_width" ng-show="empty">
   No todos in {{list}}.
 </span>
-<div class="catg_todos">
+<div >
   <ul >
-      <li class="todos" ng-repeat="todo in catgtodos ">
+      <li class="list-group-item list-group-item-warning todos" ng-repeat="todo in catgtodos ">
         {{ todo.text }}
       </li>
   </ul>
