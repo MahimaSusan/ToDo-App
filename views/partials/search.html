@@ -1,0 +1,12 @@
+<div>
+  <h3 class="result_head" ng-show="empty_search">Results for "{{search_result}}"</h3>
+  <span class="list-group-item list-group-item-danger empty_width" ng-show="no_result">
+    No results.
+  </span>
+  <ul class="search_ul">
+    <li ng-repeat="todo in results">
+        <span class="catg_result">{{todo.todoCatg}}</span>
+      <i class="fa fa-dot-circle-o"></i><span class="todo_text">{{todo.text}}</span>
+    </li>
+  </ul>
+</div>

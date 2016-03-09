@@ -24,10 +24,9 @@ todoApp.config(function($stateProvider, $urlRouterProvider){
             			}
            }
         })
-        // .state('todoList.catg',{
-        //   	url: "/:key",
-        //   	templateUrl:"./partials/search.html",
-        //    	controller:'searchController'
-        //      }
-        // })
+        .state('todoList.search',{
+          	url: "/:keyword",
+          	templateUrl:"./partials/search.html",
+           	controller:'searchController'
+             })
     });

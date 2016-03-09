@@ -76,7 +76,28 @@ header img {
   margin-top: -10px;
 }
 
+/* line 14, ../sass/screen.scss */
+body {
+  font-family: 'Roboto Slab', serif;
+}
 /* line 16, ../sass/screen.scss */
+body a:hover {
+  text-decoration: none;
+}
+/* line 19, ../sass/screen.scss */
+body a:active {
+  text-decoration: none;
+}
+/* line 22, ../sass/screen.scss */
+body a:visited {
+  text-decoration: none;
+}
+/* line 25, ../sass/screen.scss */
+body a:link {
+  text-decoration: none;
+}
+
+/* line 31, ../sass/screen.scss */
 #side_nav {
   margin: 0 auto;
   width: 15%;
@@ -88,17 +109,17 @@ header img {
   top: 51px;
   bottom: 0;
 }
-/* line 27, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 #side_nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 32, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 #side_nav ul li {
   height: 50px;
 }
-/* line 34, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 #side_nav ul li a {
   display: block;
   color: #222;
@@ -106,73 +127,43 @@ header img {
   text-decoration: none;
   cursor: pointer;
 }
-/* line 41, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 #side_nav ul li a:hover {
   background-color: #222;
   color: white;
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 #seperator {
   display: inline-block;
   width: 16%;
 }
 
-/* line 52, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 #partial {
   display: inline-block;
   margin: 0 auto;
   box-sizing: border-box;
   width: 80%;
-  margin-top: 80px;
 }
 
-/* line 59, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 #new_head {
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+  clear: both;
   width: 100%;
   margin-left: 15px;
 }
-/* line 65, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 #new_head h1 {
   font-size: 30px;
   font-weight: 600;
   padding: 10px;
 }
 
-/* line 71, ../sass/screen.scss */
-#add_todo {
-  margin: 0 auto;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px;
-  margin-top: 25px;
-}
-
-/* line 78, ../sass/screen.scss */
-.todo_date {
-  width: 33%;
-  box-sizing: border-box;
-  display: inline-block;
-}
-
-/* line 83, ../sass/screen.scss */
-.new_todo {
-  width: 33%;
-  box-sizing: border-box;
-  display: inline-block;
-}
-
-/* line 88, ../sass/screen.scss */
-.new_catg {
-  width: 33%;
-  box-sizing: border-box;
-  display: inline-block;
-}
-
-/* line 93, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 .new_input {
   display: block;
   margin: 0;
@@ -183,29 +174,16 @@ header img {
   border: 1px solid #a1a1a1;
 }
 
-/* line 103, ../sass/screen.scss */
-.new_label {
-  font-size: 20px;
-  font-weight: 400;
-}
-
-/* line 107, ../sass/screen.scss */
-#new_btn {
-  display: block;
-  text-align: center;
-  margin-top: 50px;
-}
-
-/* line 113, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 .li-width {
   width: 333px;
 }
-/* line 115, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 .li-width a:active {
   color: red;
 }
 
-/* line 119, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 #catList {
   float: right;
   margin: 0 auto;
@@ -215,7 +193,7 @@ header img {
   margin-top: 32px;
 }
 
-/* line 127, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 #catgs_list {
   margin: 0 auto;
   box-sizing: border-box;
@@ -224,94 +202,115 @@ header img {
   display: inline-block;
 }
 
-/* line 134, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 .h1_size {
-  font-size: 30px;
+  font-size: 26px;
 }
 
-/* line 138, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 .empty_width {
   margin-top: 10px;
   font-size: 18px;
 }
 
-/* line 142, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 .icon {
   float: right;
-  color: #222;
 }
 
-/* line 146, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 .add_catg {
   border: 1px solid lightgrey;
   padding: 20px;
   margin: 22px;
 }
 
-/* line 152, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 .catg_btn {
   margin-top: 25px;
 }
 
-/* line 156, ../sass/screen.scss */
-.todo_btn {
-  margin-top: 25px;
-}
-
-/* line 160, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 .catg_list {
   height: 37px;
   font-size: 20px;
 }
-/* line 164, ../sass/screen.scss */
-.catg_list a:hover {
-  color: grey;
-  text-decoration: none;
-}
 
-/* line 169, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 .selected {
   font-weight: bold;
   color: #3c763d;
   background-color: #dff0d8;
 }
-/* line 173, ../sass/screen.scss */
-.selected a {
-  text-decoration: none;
-}
 
-/* line 177, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 .new_catgory {
   margin-top: 22px;
 }
 
-/* line 180, ../sass/screen.scss */
-.catg_todos {
-  padding: 25px;
-}
-
-/* line 183, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 .todos {
-  font-size: 18px;
+  font-size: 14px;
 }
 
-/* line 186, ../sass/screen.scss */
+/* line 150, ../sass/screen.scss */
 .search_input {
   float: right;
-  display: block;
-  margin: 0;
-  font-weight: normal;
-  font-family: sans-serif;
   font-size: 15px;
   border-radius: 25px 0px 0px 25px;
   padding: 5px;
   border: 1px solid #a1a1a1;
-  background-color: #fff;
+  height: 33px;
 }
 
-/* line 198, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .search_btn {
-  background-color: #fff;
   float: right;
   border-radius: 0px 25px 25px 0px;
+  height: 33px;
+  font-size: 17px;
+}
+
+/* line 164, ../sass/screen.scss */
+.search_box {
+  float: right;
+  margin-top: 20px;
+}
+
+/* line 168, ../sass/screen.scss */
+.todo_text {
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+/* line 172, ../sass/screen.scss */
+.result_head {
+  color: red;
+  font-size: 25px;
+}
+
+/* line 176, ../sass/screen.scss */
+.catg_result {
+  box-sizing: border-box;
+  font-size: 20px;
+  padding-bottom: 10px;
+  display: block;
+}
+
+/* line 182, ../sass/screen.scss */
+.search_ul {
+  padding-top: 15px;
+}
+/* line 184, ../sass/screen.scss */
+.search_ul li {
+  padding: 11px;
+}
+
+/* line 188, ../sass/screen.scss */
+.close_icon {
+  position: absolute;
+  top: 81px;
+  right: 93px;
+  background-color: transparent;
+  z-index: 2;
 }
