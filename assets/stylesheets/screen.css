@@ -479,3 +479,29 @@ ul {
 .show_animate.ng-hide {
   opacity: 0;
 }
+
+/* line 319, ../sass/screen.scss */
+[ui-view].ng-enter, [ui-view].ng-leave {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+/* line 325, ../sass/screen.scss */
+[ui-view].ng-enter {
+  opacity: 0;
+}
+
+/* line 329, ../sass/screen.scss */
+[ui-view].ng-enter-active {
+  opacity: 1;
+}
+
+/* line 333, ../sass/screen.scss */
+[ui-view].ng-leave {
+  opacity: 1;
+}
+
+/* line 337, ../sass/screen.scss */
+[ui-view].ng-leave-active {
+  opacity: 0;
+}
