@@ -1,4 +1,4 @@
-todoApp.controller('todolistController',function ($scope,getLocalStorage){
+todoApp.controller('todolistController',function ($scope,$state,getLocalStorage){
 	$scope.catgArry=getLocalStorage.getCatgs();
 	$scope.empty=false;
   $scope.selectedRow = null;
@@ -23,5 +23,6 @@ todoApp.controller('todolistController',function ($scope,getLocalStorage){
 	}
 	$scope.clear=function () {
 		$scope.searchTodo="";
+		$state.go('todoList.search',{keyword:''});
 	}
 });
