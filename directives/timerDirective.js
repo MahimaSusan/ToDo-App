@@ -20,6 +20,7 @@ todoApp.directive('stopwatch', function() {
             var mode = 1;
             var status = 0;
             var timer_id;
+            var daysecond = 86400;
             self.play = 1;
             this.plays = function(interval) {
                 self.play = 0;
@@ -29,7 +30,7 @@ todoApp.directive('stopwatch', function() {
                     status = 1;
 
                     function timeRun() {
-                        if (time < 86400) {
+                        if (time < daysecond) {
                             time++;
                             timeRet = self.getElapsedMs();
                             if (typeof(callback) === 'function') callback(timeRet);
@@ -39,6 +40,8 @@ todoApp.directive('stopwatch', function() {
                 }
             };
             self.pauses = function() {
+                
+
                 self.play = 1;
                 if (status == 1) {
                     status = 0;

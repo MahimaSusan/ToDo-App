@@ -4,6 +4,7 @@
         <title>
             ToDo-App
         </title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'/>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" type="text/css" href="../assets/styleSheets/bootstrap.css"/>
         <link href="../assets/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -21,6 +22,9 @@
         </script>
         <script type="text/javascript" src="../assets/js/lib/jquery-ui.js">
         </script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css">
+        <link rel="shortcut icon" href="../assets/images/todoicon.jpeg" type="image/x-icon" />
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
     </head>
     <body>
         <header>
@@ -28,21 +32,23 @@
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a class="navbar-brand" id="site_logo" href="#">
-                           <img src="../assets/images/todologo.png">
+                           <b>Todo App</b>
                         </a>
                     </div>
                 </div>
             </nav>
         </header>
        <div id="side_nav">
-       	<ul>
+       	<ul class="sidenav">
        		<li><a ui-sref="newtodo">New List</a></li>
        		<li><a >ToDo List</a></li>
   			<li><a ui-sref="activity_logger">Activity Logger</a></li>
 		</ul>
        </div>
        <div id="seperator"></div>
-       <div ui-view id="partial"></div>
+       <div ui-view id="partial" 
+       >
+       </div>
         <script type="text/javascript" src="../app.js"></script>
         <script type="text/javascript" src="../routes/todoRoute.js"></script>
         <script type="text/javascript" src="../controllers/newtodoController.js"></script>
@@ -50,6 +56,7 @@
         <script type="text/javascript" src="../routes/loggerRoute.js"></script>
         <script type="text/javascript" src="../controllers/timerController.js"></script>
         <script type="text/javascript" src="../directives/timerDirective.js"></script>
+        <script type="text/javascript" src="../controllers/completedtodoController.js"></script>
         
     </body>
 </html>

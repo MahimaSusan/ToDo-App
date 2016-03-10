@@ -15,14 +15,15 @@ header{
 
 #side_nav{
 	margin: 0 auto;
-	width: 15%;
+	width: 14%;
 	display: inline-block;
 	box-sizing:border-box;
-	background-color:#ddd;
 	position:fixed;
 	left:0;
 	top:51px;
 	bottom:0;
+	margin-top: 4%;
+    border-right: 1px solid lightgrey;
 
 	ul {
     	list-style-type: none;
@@ -54,7 +55,12 @@ header{
 	margin:0 auto;
 	box-sizing:border-box;
 	width:80%;
-	margin-top:80px;
+	margin-top:0px;
+	position: fixed;
+
+}
+body{
+	font-family: Adelle,Georgia,serif;
 }
 #new_head{
 	margin:0 auto;
@@ -63,7 +69,7 @@ header{
 	width: 100%;
     margin-left:15px;
 	h1{
-		font-size:30px;
+		font-size: 30px;
 		font-weight:600;
 	}
 }
@@ -123,12 +129,97 @@ header{
 }
 .strikeItem{
 		text-decoration: line-through;
+		color: #006400;
 		}
 		.playedd{
 			text-decoration: line-through;
 		}
 
 h1{
-	font-size: 30px;
+	font-size: 20px;
+	font-weight:bold;
+	padding-bottom: 20px;
+	color:black;
+}
+.completedlist{
+	height: 50px;
+	border-bottom: 1px solid #808080;
+
+}
+.buttons{
+display: inline-block;
+float:right;
+margin-right: 10%;
+}
+.timer{
+	display: inline-block;
+	float:right;
+	padding-right:2%;
+}
+.list{
+	height: 50px;
+	border-bottom: 1px solid #808080;
+	margin-right:5%;
+	margin-left: 5%;
+	margin-bottom:1%;
+}
+.list:hover{
+	background-color:lightgrey;
+}
+.space{
+	padding-left: 10%;
+	display: inline-block;
+
+}
+ul{
+	margin-top: 5%;
+}
+.fa-times{
+	color:#690707;
+}
+.navbar-inverse{
+	background-color:#222;
+	border: 1px solid grey;
+	height: 50px;
+}
+.header1{
+	height:40px;
+	margin-top:0px;
+	width: 105%;
+	background-color:white;
+	border: 1px solid white;
+}
+
+#site_logo{
+	font-size:20px;
+}
+.navbar-inverse .navbar-nav li  a {
+	color:#4C3F3F;
+	font-weight:bold;
+	border: 1px solid lightgrey;
+    border-radius: 10px;
+    margin-right: 4px;
+}
+.navbar-inverse .navbar-nav li  a:hover{
+    color: black;
+    background-color:grey;
+}
+.navbar-brand{
 	font-weight:bold;
 }
+.sidenav li a{
+	font-weight:bold;
+}
+#side_nav ul li a:hover{
+	background-color:grey;
+}
+#side_nav ul li a{
+	padding-top: 10%;
+    padding-left: 15%;
+    padding-bottom: 10%;
+}
+.navbar-nav{
+	float:right;
+}
+
+

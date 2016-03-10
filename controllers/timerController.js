@@ -1,4 +1,4 @@
-todoApp.controller('timerController', ['$scope', 'getLocalStorage', '$interval', function($scope, getLocalStorage, $interval) {
+todoApp.controller('timerController', ['$scope', 'getLocalStorage', '$interval',function($scope, getLocalStorage, $interval,ngAnimate) {
     $scope.todosArray = getLocalStorage.getTodos();
     $scope.addTodo = function() {
         $scope.todosArray.push({
@@ -20,4 +20,6 @@ todoApp.controller('timerController', ['$scope', 'getLocalStorage', '$interval',
     $('.list').on('click', function() {
         $(this).parent().prepend(this);
     });
+     
+
 }]);
