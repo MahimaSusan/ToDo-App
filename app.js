@@ -1,1 +1,1 @@
-var todoApp = angular.module('todoApp',['catgService','storageService','ui.router','angular.filter']);
+var todoApp = angular.module('todoApp',['ngAnimate','catgService','storageService','ui.router','angular.filter']);

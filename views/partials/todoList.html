@@ -17,15 +17,15 @@
   </div>
   <div id="catgs_list" class="categories">
     <ul class="list_ul">
-      <a class="list-group-item li-width catg_list" ui-sref="todoList.catg({key:catg.todoCatg})" ng-repeat="catg in catgArry" ng-class="{'list-group-item-success':$index == selectedRow}" ng-click="setClickedRow($index)">
-        <li >{{catg.todoCatg}}</li>
+      <a class="catg_list" ui-sref="todoList.catg({key:catg.todoCatg})" ng-repeat="catg in catgArry" ng-class="{'selected_catg':$index == selectedRow}" ng-click="setClickedRow($index)">
+        <li class="cate"><i class="fa fa-circle size"></i>{{catg.todoCatg}}</li>
       </a>
     </ul>
     <div class="new_catgory">
       <i class="fa fa-plus-circle fa-lg" ng-click="add()">
           Add List
       </i>
-      <div class="add_catg" ng-show="newtodos">
+      <div class="add_catg show_animate" ng-show="newtodos">
         <input class="new_input" type="text" ng-model="todoCatg" placeholder="Enter todo category" required/>
         <button ng-click="addCatg()" class="btn btn-primary catg_btn">
             addCatgry
