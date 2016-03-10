@@ -82,7 +82,6 @@ a:link{
 	h1{
 		font-size: 30px;
 		font-weight:600;
-		padding: 10px;
 	}
 }
 .new_input{
@@ -94,12 +93,6 @@ a:link{
 	padding: 5px;
 	border: 1px solid #a1a1a1;
 	}
-.li-width {
-  width: 333px;
-	a:active {
-    color: red;
-	}
-}
 #catList {
   float: right;
   margin: 0 auto;
@@ -109,20 +102,27 @@ a:link{
   margin-top: 32px;
 }
 #catgs_list{
-	  margin: 0 auto;
-    box-sizing: border-box;
-    padding: 10px;
-    margin-top: 25px;
-    display: inline-block;
+	margin: 0 auto;
+box-sizing: border-box;
+padding: 10px;
+margin-top: 25px;
+display: inline-block;
+height: 420px;
+width: 30%;
+// border-right: 1px solid lightgrey;
 }
 .h1_size{
 	font-size: 26px;
+	color: #B5524A;
+	font-weight: 600;
 }
 .empty_width{
+	margin-top:10px;
 	font-size: 18px;
 }
 .icon{
 	float: right;
+	color: #222;
 }
 	.add_catg{
 		border: 1px solid lightgrey;
@@ -134,20 +134,34 @@ a:link{
 		margin-top: 25px;
 	}
 .catg_list {
-	height: 37px;
-  font-size: 20px;
+	li{
+		text-align: left;
+		height: 25px;
+		font-size: 22px;
+		padding-bottom: 35px;
+		color: #222;
+	}
+}
+.size{
+	font-size: 15px;
+	padding-right: 10px;
 }
 .selected_catg {
 	font-weight: bold;
-	color: #3c763d;
-	background-color: #dff0d8;
+	li{
+		color: #B5524A;
+	}
 }
 .new_catgory{
-	margin-top: 22px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 .todos{
-	font-size: 14px;
+	font-size: 15px;
+	padding-top: 10px;
 }
+
 .search_input{
 	float: right;
 	font-size: 15px;
@@ -167,7 +181,7 @@ a:link{
 	margin-top: 20px;
 }
 .todo_text{
-    font-size: 17px;
+    font-size: 19px;
 		margin-left: 10px;
 }
 .result_head{
@@ -295,4 +309,10 @@ ul{
 }
 .list_ul{
 	margin-top: 0px;
+}
+.show_animate{
+	 transition:all linear 0.8s;
+}
+.show_animate.ng-hide {
+  opacity:0;
 }

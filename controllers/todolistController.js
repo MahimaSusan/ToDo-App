@@ -5,6 +5,10 @@ todoApp.controller('todolistController',function ($scope,$state,getLocalStorage)
   $scope.setClickedRow = function(index) {
       $scope.selectedRow = index;
   }
+	// $('.catg_list').on('click', function() {
+	// 		$(this).parent().prepend(this);
+	// });
+
 	if ($scope.catgArry == ""){
 		$scope.empty=true;
 	}
