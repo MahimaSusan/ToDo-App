@@ -3,11 +3,6 @@ todoApp.config(function($stateProvider, $urlRouterProvider){
       $urlRouterProvider.otherwise("/todolist")
 
       $stateProvider
-      //   .state('newtodo', {
-      //       url: "/newList",
-      //       templateUrl: "./partials/newList.html",
-      //       controller:'newtodoController'
-      //   })
         .state('todoList', {
             url: "/todolist",
             templateUrl: "./partials/todoList.html",
@@ -28,5 +23,5 @@ todoApp.config(function($stateProvider, $urlRouterProvider){
           	url: "/:keyword",
           	templateUrl:"./partials/search.html",
            	controller:'searchController'
-             })
-    });
+        })
+});

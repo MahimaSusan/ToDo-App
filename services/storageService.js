@@ -4,7 +4,6 @@ storageService.factory('getLocalStorage', function() {
 	var todos = {};
 	var catgs = {};
 	return {
-    	// list: catgs,
     	updateTodos: function (todosArr) {
         	if (window.localStorage && todosArr) {
             	localStorage.setItem("todosArray", angular.toJson(todosArr));

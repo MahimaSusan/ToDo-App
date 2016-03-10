@@ -1,9 +1,9 @@
-todoApp.controller('catgListController',function ($scope,$filter,catgList,getLocalStorage){
+todoApp.controller('catgListController',function ($scopes,catgList,getLocalStorage){
 	$scope.list=catgList;
 	$scope.todosArray=getLocalStorage.getTodos();
 	$scope.todoform=false;
 	$scope.todoForm=function () {
-	$scope.todoform=!$scope.todoform;
+		$scope.todoform=!$scope.todoform;
 	}
 	$scope.catgtodos = _.where($scope.todosArray, {todoCatg: catgList});
 	$scope.empty=false;
@@ -12,18 +12,16 @@ todoApp.controller('catgListController',function ($scope,$filter,catgList,getLoc
 	}
 	$scope.addtodo=function () {
 		if($scope.newTodo == undefined ){
-		    	    	return true;
-		    	    }
-			 	$scope.newTodo=$filter('lowercase')($scope.newTodo);
-				$scope.todosArray.push({
-					id:Date.now(),
-					text:$scope.newTodo,
-					todoCatg:catgList,
-					completed:false
-				});
-				getLocalStorage.updateTodos($scope.todosArray);
-				$scope.newTodo="";
-				location.reload()
+		    return true;
+		}
+		$scope.todosArray.push({
+				id:Date.now(),
+				text:$scope.newTodo,
+				todoCatg:catgList,
+				completed:false
+		});
+		getLocalStorage.updateTodos($scope.todosArray);
+		$scope.newTodo="";
+		location.reload()
 	}
-	
 });

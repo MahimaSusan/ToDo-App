@@ -5,17 +5,16 @@ todoApp.controller('searchController',function ($scope,getLocalStorage,$statePar
  $scope.empty_search=true;
  if($stateParams.keyword == ""){
    $scope.empty_search=!$scope.empty_search;
-         return true;
-       }
+   return true;
+ }
  var regex = new RegExp(".*" + $stateParams.keyword + ".*", "gim");
- console.log(regex);
  $scope.results=[];
  angular.forEach($scope.todosArray, function(item) {
-            if(regex.test(item.text)){
-                $scope.results.push(item);
-            }
-        });
-  if ($scope.results == ""){
-    $scope.no_result=!$scope.no_result;
-  }
+    if(regex.test(item.text)){
+        $scope.results.push(item);
+    }
+ });
+ if ($scope.results == ""){
+   $scope.no_result=!$scope.no_result;
+ }
 });
