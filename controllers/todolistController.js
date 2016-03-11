@@ -5,9 +5,9 @@ todoApp.controller('todolistController',function ($scope,$state,getLocalStorage)
   $scope.setClickedRow = function(index) {
       $scope.selectedRow = index;
   }
-	// $('.catg_list').on('click', function() {
-	// 		$(this).parent().prepend(this);
-	// });
+	$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
 
 	if ($scope.catgArry == ""){
 		$scope.empty=true;
@@ -16,14 +16,19 @@ todoApp.controller('todolistController',function ($scope,$state,getLocalStorage)
 	$scope.add=function () {
 		$scope.newtodos=!$scope.newtodos;
 	}
+	$scope.clearForm=function () {
+		$scope.newtodos=!$scope.newtodos;
+		$scope.todoCatg="";
+	}
 	$scope.addCatg=function () {
-		if($scope.todoCatg == undefined){
+		if($scope.todoCatg == undefined || $scope.todoCatg == ""){
     	    	return true;
     }
 		$scope.catgArry.push({todoCatg:$scope.todoCatg});
 		getLocalStorage.updateCatg($scope.catgArry);
 		$scope.todoCatg="";
-		location.reload();
+		$scope.newtodos=!$scope.newtodos;
+		$scope.empty=false;
 	}
 	$scope.clear=function () {
 		$scope.searchTodo="";

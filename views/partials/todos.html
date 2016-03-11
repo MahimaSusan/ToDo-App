@@ -1,6 +1,6 @@
 <div>
   <h3 class="h1_size ">{{list}}
-    <i class="fa fa-plus-circle icon" ng-click="todoForm()" title="click to add new todo">
+    <i class="fa fa-plus-circle icon" ng-click="todoForm()" data-toggle="tooltip" data-placement="top" title="add todo">
     </i>
   </h3>
   <span class="list-group-item list-group-item-warning empty_width" ng-show="empty">
@@ -8,16 +8,17 @@
   </span>
   <div>
     <ul class="list_ul">
-      <li class="todos " ng-repeat="todo in catgtodos ">
+      <li class="todos" ng-repeat="todo in todosArray | categFilter: list ">
         <i class="fa fa-dot-circle-o"></i>
         <span class="todo_text">{{ todo.text }}</span>
       </li>
     </ul>
   </div>
   <div class="add_catg show_animate" ng-show="todoform">
+    <span class="close_form" ng-click="clearForm()"></span>
     <input class="new_input" type="text" ng-model="newTodo" placeholder="Enter todo" required/>
     <button ng-click="addtodo()" class="btn btn-primary catg_btn">
-      addtodo
+      submit
     </button>
   </div>
 </div>

@@ -1,17 +1,24 @@
 todoApp.controller('catgListController',function ($scope,catgList,getLocalStorage){
+	$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
 	$scope.list=catgList;
 	$scope.todosArray=getLocalStorage.getTodos();
 	$scope.todoform=false;
 	$scope.todoForm=function () {
 		$scope.todoform=!$scope.todoform;
 	}
-	$scope.catgtodos = _.where($scope.todosArray, {todoCatg: catgList});
+	// $scope.catgtodos = _.where($scope.todosArray, {todoCatg: catgList});
 	$scope.empty=false;
-	if ($scope.catgtodos == ""){
-		$scope.empty=true;
+	// if ($scope.catgtodos == ""){
+	// 	$scope.empty=true;
+	// }
+	$scope.clearForm=function () {
+		$scope.todoform=!$scope.todoform;
+		$scope.newTodo="";
 	}
 	$scope.addtodo=function () {
-		if($scope.newTodo == undefined ){
+		if($scope.newTodo == undefined || $scope.newTodo == ""){
 		    return true;
 		}
 		$scope.todosArray.push({
@@ -22,6 +29,6 @@ todoApp.controller('catgListController',function ($scope,catgList,getLocalStorag
 		});
 		getLocalStorage.updateTodos($scope.todosArray);
 		$scope.newTodo="";
-		location.reload()
+		$scope.todoform=!$scope.todoform;
 	}
 });
