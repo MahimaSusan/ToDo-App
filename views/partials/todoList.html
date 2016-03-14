@@ -11,26 +11,29 @@
     <h1>
         Todo List
     </h1>
-    <i class="fa fa-plus-circle fa-lg" ng-click="add()" data-toggle="tooltip" data-placement="top" title="add category">
+    <i class="fa fa-plus-circle fa-lg"  ng-click="newtodos=!newtodos" data-toggle="tooltip" data-placement="top" title="add category">
     </i>
     <div class="add_catg show_animate" ng-show="newtodos">
       <span class="close_form" ng-click="clearForm()"></span>
-      <input class="new_input" type="text" ng-model="todoCatg" placeholder="Enter todo category" required/>
-      <button ng-click="addCatg()" class="btn btn-primary catg_btn">
+      <form ng-submit="addCatg()">
+      <input class="new_input" type="text" ng-model="todoCatg" placeholder="Enter todo category" autofocus="true" required/>
+      <button  type="submit" class="btn btn-primary catg_btn">
           submit
       </button>
+    </form>
     </div>
-    <span class="list-group-item  empty_width no_todo" ng-show="empty">
+    <span class="list-group-item  empty_width no_todo" ng-if="catgArry.length == 0 ">
         Todo list is empty.
     </span>
-
   </div>
 <div ui-view id="catList"></div>
   <div id="catgs_list" class="categories">
     <ul class="list_ul">
-      <a class="catg_list" ui-sref="todoList.catg({key:catg.todoCatg})" ng-repeat="catg in catgArry" ng-class="{'selected_catg':$index == selectedRow}" ng-click="setClickedRow($index)">
-        <li class="cate"><i class="fa fa-circle size"></i>{{catg.todoCatg}}</li>
-      </a>
+        <li class="cate" ng-repeat="catg in catgArry" ng-class="{'selected_catg':$index == selectedRow}" ng-click="setClickedRow($index)">
+          <a class="catg_list" ui-sref="todoList.catg({key:catg.todoCatg})">
+            <i class="fa fa-circle size"></i>{{catg.todoCatg}}
+            </a>
+        </li>
     </ul>
   </div>
 

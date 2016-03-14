@@ -1,15 +1,12 @@
-todoApp.controller('catgListController',function ($scope,catgList,getLocalStorage){
+todoApp.controller('catgListController',function ($scope,$stateParams,getLocalStorage){
 	$(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
 });
-	$scope.list=catgList;
+	$scope.list=$stateParams.key;
 	$scope.todosArray=getLocalStorage.getTodos();
+	console.log($scope.todosArray);
 	$scope.todoform=false;
 	$scope.show=true;
-
-	$scope.todoForm=function () {
-		$scope.todoform=!$scope.todoform;
-	}
 	$scope.clearForm=function () {
 		$scope.todoform=!$scope.todoform;
 		$scope.newTodo="";
@@ -18,10 +15,10 @@ todoApp.controller('catgListController',function ($scope,catgList,getLocalStorag
 		if($scope.newTodo == undefined || $scope.newTodo == ""){
 		    return true;
 		}
-		$scope.todosArray.push({
+		$scope.todosArray.unshift({
 				id:Date.now(),
 				text:$scope.newTodo,
-				todoCatg:catgList,
+				todoCatg:$scope.list,
 				completed:false
 		});
 		getLocalStorage.updateTodos($scope.todosArray);
@@ -32,5 +29,4 @@ todoApp.controller('catgListController',function ($scope,catgList,getLocalStorag
 		this.todo.completed= !this.todo.completed;
 		getLocalStorage.updateTodos($scope.todosArray);
 	}
-	$scope.completedTodos=[];
 });

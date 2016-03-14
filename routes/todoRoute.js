@@ -11,15 +11,15 @@ todoApp.config(function($stateProvider, $urlRouterProvider){
         .state('todoList.catg',{
           	url: "/:key",
           	templateUrl:"./partials/todos.html",
-           	controller:'catgListController',
-            resolve:{
-              	catgList: function(catglistSrv,$stateParams){                   
-              				return catglistSrv.getCatgs($stateParams.key);
-            			}
-           }
+           	controller:'catgListController'
+          //   resolve:{
+          //      catgList: function(catglistSrv,$stateParams){
+          //     				return catglistSrv.getCatgs($stateParams.key);
+          //   			}
+          // }
         })
         .state('todoList.search',{
-          	url: "/:keyword",
+          	url: "/search/:keyword",
           	templateUrl:"./partials/search.html",
            	controller:'searchController'
         })

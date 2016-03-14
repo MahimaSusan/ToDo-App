@@ -144,13 +144,15 @@ display: inline-block;
 	.catg_btn{
 		margin-top: 25px;
 	}
-.catg_list {
+.list_ul {
 
 	li{
 		text-align: left;
 		height: 25px;
 		font-size: 22px;
 		padding-bottom: 35px;
+	}
+	a {
 		color: #222;
 	}
 }
@@ -160,9 +162,9 @@ display: inline-block;
 }
 .selected_catg {
 	font-weight: bold;
-	li{
-		color: #B5524A;
-	}
+	a{
+	color: #B5524A;
+}
 }
 
 .todos{

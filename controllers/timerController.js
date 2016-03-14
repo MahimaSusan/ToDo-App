@@ -14,12 +14,12 @@ todoApp.controller('timerController', ['$scope', 'getLocalStorage', '$interval',
         $scope.sharedTime = new Date();
     }, 500);
     $scope.selectedRow = null;
-    $scope.setClickedRow = function(index) { 
+    $scope.setClickedRow = function(index) {
         $scope.selectedRow = index;
     }
     $('.list').on('click', function() {
         $(this).parent().prepend(this);
     });
-     
+
 
 }]);
