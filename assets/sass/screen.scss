@@ -115,6 +115,7 @@ display: inline-block;
 	font-size: 26px;
 	color: #B5524A;
 	font-weight: 600;
+	padding-bottom: 10px;
 }
 .empty_width{
 	margin-top:10px;
@@ -189,7 +190,6 @@ display: inline-block;
 }
 .todo_text{
     font-size: 19px;
-		margin-left: 10px;
 }
 .result_head{
 	color: red;
@@ -390,4 +390,17 @@ ul{
 	font-size: 12px;
 	box-shadow: 0 0 2px #337AB7;
 	cursor: pointer;
+}
+.complted_show{
+	color: #03A9F4;
+	cursor: pointer;
+	float: right;
+}
+.completed_count{
+	font-size: 18px;
+	padding: 6px;
+}
+.com_ul{
+	margin-top: 0;
+	padding: 10px;
 }

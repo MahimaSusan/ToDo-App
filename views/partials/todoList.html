@@ -25,14 +25,13 @@
     </span>
 
   </div>
-  <div ui-view id="catList"></div>
+<div ui-view id="catList"></div>
   <div id="catgs_list" class="categories">
     <ul class="list_ul">
       <a class="catg_list" ui-sref="todoList.catg({key:catg.todoCatg})" ng-repeat="catg in catgArry" ng-class="{'selected_catg':$index == selectedRow}" ng-click="setClickedRow($index)">
         <li class="cate"><i class="fa fa-circle size"></i>{{catg.todoCatg}}</li>
       </a>
     </ul>
-
   </div>
 
 </div>

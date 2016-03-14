@@ -5,14 +5,11 @@ todoApp.controller('catgListController',function ($scope,catgList,getLocalStorag
 	$scope.list=catgList;
 	$scope.todosArray=getLocalStorage.getTodos();
 	$scope.todoform=false;
+	$scope.show=true;
+
 	$scope.todoForm=function () {
 		$scope.todoform=!$scope.todoform;
 	}
-	// $scope.catgtodos = _.where($scope.todosArray, {todoCatg: catgList});
-	$scope.empty=false;
-	// if ($scope.catgtodos == ""){
-	// 	$scope.empty=true;
-	// }
 	$scope.clearForm=function () {
 		$scope.todoform=!$scope.todoform;
 		$scope.newTodo="";
@@ -31,4 +28,9 @@ todoApp.controller('catgListController',function ($scope,catgList,getLocalStorag
 		$scope.newTodo="";
 		$scope.todoform=!$scope.todoform;
 	}
+	$scope.changeTodo=function () {
+		this.todo.completed= !this.todo.completed;
+		getLocalStorage.updateTodos($scope.todosArray);
+	}
+	$scope.completedTodos=[];
 });

@@ -1,18 +1,37 @@
 <div>
+  <div>
   <h3 class="h1_size ">{{list}}
-    <i class="fa fa-plus-circle icon" ng-click="todoForm()" data-toggle="tooltip" data-placement="top" title="add todo">
+    <i class="fa fa-plus-circle icon" ng-click="todoForm()" data-toggle="tooltip" data-placement="top" title="add new todo">
     </i>
   </h3>
-  <span class="list-group-item list-group-item-warning empty_width" ng-show="empty">
-    No todos in {{list}}.
+  <span class="completed_count">
+    {{completedTodos.length}}   Completed
   </span>
-  <div>
-    <ul class="list_ul">
-      <li class="todos" ng-repeat="todo in todosArray | categFilter: list ">
+  <span  ng-click="show=!show" ng-show="show" class="complted_show" data-toggle="tooltip" data-placement="top" title="completed todo">Show</span>
+  <span ng-click="show=!show" ng-hide="show" class="complted_show" data-toggle="tooltip" data-placement="top" title="todos list">Hide</span>
+  <div ng-hide="show" class="">
+    <span ng-if="completedTodos.length == 0 " class="list-group-item list-group-item-warning empty_width">
+      No completed todos in {{list}}.
+    </span>
+    <ul class="com_ul">
+      <li class="todos" ng-repeat="todo in  completedTodos = (todosArray | compltdFilter: list)">
         <i class="fa fa-dot-circle-o"></i>
         <span class="todo_text">{{ todo.text }}</span>
       </li>
     </ul>
+  </div>
+    <div ng-show="show">
+      <span ng-if="notcompletedTodos.length == 0" class="list-group-item list-group-item-warning empty_width">
+      No new todos in {{list}}.
+      </span>
+      <ul class="list_ul">
+        <li class="todos" ng-repeat="todo in notcompletedTodos = (todosArray | categFilter: list)">
+            <input type="checkbox" ng-checked="todo.completed"  ng-click="changeTodo()"></input>
+						<span ng-show="!todo.completed" class="todo_text">{{ todo.text }}</span>
+						<del ng-show="todo.completed" class="todo_text">{{ todo.text }}</del>
+        </li>
+      </ul>
+    </div>
   </div>
   <div class="add_catg show_animate" ng-show="todoform">
     <span class="close_form" ng-click="clearForm()"></span>
