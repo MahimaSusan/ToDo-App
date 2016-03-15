@@ -1,11 +1,13 @@
 <div>
   <div class="search_box">
+    <form ng-submit="">
     <a ui-sref="todoList.search({keyword:searchTodo})">
-      <button class=" search_btn btn btn-primary"><i class="fa fa-search"></i>
+      <button type="submit" class=" search_btn btn btn-primary"><i class="fa fa-search"></i>
       </button>
     </a>
     <i class="fa fa-times-circle fa-lg close_icon" ng-click="clear()" ng-show="searchTodo"></i>
     <input class="search_input" type="text" ng-model="searchTodo" placeholder="search"/>
+  </form>
   </div>
   <div id="new_head">
 
@@ -30,8 +32,8 @@
         Todo list is empty.
     </span>
     <ul class="list_ul">
-        <li class="cate" ng-repeat="catg in catgArry" ng-class="{'selected_catg': selectedRow === catg}" ng-click="setClickedRow(catg)">
-          <a class="catg_list" ui-sref="todoList.catg({key:catg.todoCatg})">
+        <li class="cate" ng-repeat="catg in catgArry" ng-class="{'selected_catg': selectedRow === catg}" ng-click="setClickedRow(catg)" data-toggle="tooltip" data-placement="left" title="view todos">
+          <a class="catg_list" ui-sref="todoList.catg({key:catg.todoCatg})" >
             <i class="fa fa-circle size"></i>{{catg.todoCatg}}
           </a>
         </li>

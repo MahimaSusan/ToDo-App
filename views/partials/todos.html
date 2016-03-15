@@ -1,31 +1,31 @@
 <div>
   <div>
-  <h3 class="h1_size ">{{list}}
+  <h3 class="h1_size ">{{category}}
     <i class="fa fa-plus-circle icon" ng-click="todoform=!todoform" data-toggle="tooltip" data-placement="top" title="add new todo">
     </i>
   </h3>
   <span class="completed_count">
     {{completedTodos.length}}   Completed
   </span>
-  <span  ng-click="show=!show" ng-show="show" class="complted_show" data-toggle="tooltip" data-placement="top" title="completed todo">Show</span>
+  <span  ng-click="show=!show" ng-show="show" class="complted_show" data-toggle="tooltip" data-placement="top" title="completed todos">Show</span>
   <span ng-click="show=!show" ng-hide="show" class="complted_show">ShowList</span>
   <div ng-hide="show" class="">
-    <span ng-if="completedTodos.length == 0 " class="list-group-item list-group-item-warning empty_width">
-      No completed todos in {{list}}.
+    <span ng-if="completedTodos.length <= 0 " class="list-group-item list-group-item-warning empty_width">
+      No completed todos in {{category}}.
     </span>
     <ul class="com_ul">
-      <li class="todos" ng-repeat="todo in  completedTodos = (todosArray | compltdFilter: list)">
+      <li class="todos" ng-repeat="todo in  completedTodos = (todosArray | compltdFilter: category)">
         <input type="checkbox" ng-checked="todo.completed"  ng-click="changeTodo()"></input>
         <span class="todo_text">{{ todo.text }}</span>
       </li>
     </ul>
   </div>
     <div ng-show="show">
-      <span ng-if="notcompletedTodos.length == 0" class="list-group-item list-group-item-warning empty_width">
-      No new todos in {{list}}.
+      <span ng-if="notcompletedTodos.length <= 0" class="list-group-item list-group-item-warning empty_width">
+      No new todos in {{category}}.
       </span>
-      <ul class="list_ul">
-        <li class="todos" ng-repeat="todo in notcompletedTodos = (todosArray | categFilter: list)">
+      <ul class="list_todo">
+        <li class="todos" ng-repeat="todo in notcompletedTodos = (todosArray | categFilter: category)">
             <input type="checkbox" ng-checked="todo.completed"  ng-click="changeTodo()"></input>
 						<span class="todo_text">{{ todo.text }}</span>
         </li>

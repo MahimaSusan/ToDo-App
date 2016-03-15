@@ -146,6 +146,18 @@ h1{
 	.catg_btn{
 		margin-top: 25px;
 	}
+	.list_todo{
+		margin-top: 0px;
+		li{
+			text-align: left;
+			height: 25px;
+			font-size: 22px;
+			padding-bottom: 10px;
+		}
+		a {
+			color: #222;
+		}
+	}
 .list_ul {
 
 	li{
@@ -166,12 +178,13 @@ h1{
 	font-weight: bold;
 	a{
 	color: #B5524A;
-}
+	}
 }
 
 .todos{
 	font-size: 15px;
 	padding-top: 10px;
+	padding-bottom: 15px;
 }
 
 .search_input{
@@ -203,8 +216,9 @@ h1{
 .catg_result{
 		box-sizing:border-box;
 		font-size: 20px;
-		padding-bottom:  10px;
+		padding-bottom:10px;
 		display: block;
+		padding-top: 5px;
 }
 
 .search_todo{
@@ -323,54 +337,7 @@ ul{
 .list_ul{
 	margin-top: 5px;
 }
-//
-// [ui-view].ng-enter, [ui-view].ng-leave {
-//   -webkit-transition:0.4s linear all;
-//   transition:0.4s linear all;
-// }
-//
-// [ui-view].ng-enter {
-//   opacity: 0;
-// }
-//
-// [ui-view].ng-enter-active {
-//   opacity: 1;
-// }
-//
-// [ui-view].ng-leave {
-//   opacity: 0;
-// }
-//
-// [ui-view].ng-leave-active {
-//   opacity: 0;
-// }
-// .show_animate{
-// 	 transition:all linear 0.4s;
-// }
-// .show_animate.ng-hide {
-//   opacity:0;
-// }
-//
-// .ng-enter {
-//   -webkit-transition: 1s;
-//   transition: 1s;
-//
-//   margin-left: 100%;
-// }
-//
-// .ng-enter-active {
-//   margin-left: 0;
-// }
-//
-// .ng-leave {
-//   -webkit-transition: 1s;
-//   transition: 1s;
-//   margin-left: 0;
-// }
-//
-// .ng-leave-active {
-//   margin-left: 100%;
-// }
+
 .no_todo{
 	width: 100%;
 }

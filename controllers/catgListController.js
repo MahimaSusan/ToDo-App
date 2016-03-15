@@ -1,9 +1,14 @@
 todoApp.controller('catgListController',function ($scope,$state,$stateParams,getLocalStorage){
 	$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
-});
-	$scope.list=$stateParams.key;
-	if($scope.list == undefined || $scope.list == ""){
+    $('[data-toggle="tooltip"]').tooltip({delay:{hide:100}});
+	});
+	$scope.catgList=getLocalStorage.getCatgs();
+	angular.forEach($scope.catgList, function(item) {
+			if(item.todoCatg == $stateParams.key){
+				$scope.category=item.todoCatg;
+			}
+	});
+	if($scope.category != $stateParams.key){
 		$state.go('todoList',{});
 			return true;
 	}
@@ -21,7 +26,7 @@ todoApp.controller('catgListController',function ($scope,$state,$stateParams,get
 		$scope.todosArray.unshift({
 				id:Date.now(),
 				text:$scope.newTodo,
-				todoCatg:$scope.list,
+				todoCatg:$scope.category,
 				completed:false
 		});
 		getLocalStorage.updateTodos($scope.todosArray);
