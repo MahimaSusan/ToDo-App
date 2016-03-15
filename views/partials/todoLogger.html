@@ -1,0 +1,30 @@
+<div>
+    <nav class="navbar navbar-inverse header1" >
+        <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a class="list2" ui-sref="activity_logger.todolog">
+                    <i class="fa fa-caret-square-o-right"></i>
+                        Todo Logger
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref ="activity_logger.completedtodos">
+                    <i class="fa fa-check-square-o"></i>
+                        Completed Todos
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref ="activity_logger.report">
+                    <i class="fa fa-bar-chart"></i>
+                        Report
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div ui-view>
+</div>

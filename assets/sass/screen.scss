@@ -1,0 +1,380 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+header{
+	height:51px;
+	img{
+	    margin-top: -10px;
+	}
+}
+body{
+font-family: Adelle,Georgia,serif;
+a:hover{
+	text-decoration: none;
+}
+a:active{
+	text-decoration: none;
+}
+a:visited{
+	text-decoration: none;
+}
+a:link{
+	text-decoration: none;
+}
+
+}
+
+#side_nav{
+	margin: 0 auto;
+	width: 14%;
+	display: inline-block;
+	box-sizing:border-box;
+	position:fixed;
+	left:0;
+	top:21px;
+	bottom:0;
+	margin-top: 4%;
+    border-right: 1px solid lightgrey;
+
+	ul {
+    	list-style-type: none;
+    	margin: 0;
+    	padding: 0;
+
+	li {
+		height:50px;
+	a {
+    	display: block;
+    	color: #222;
+    	padding: 8px 0 8px 16px;
+    	text-decoration: none;
+    	cursor :pointer;
+		}
+		a:hover {
+   		 background-color: #222;
+   		 color: white;
+			}
+	  }
+	}
+}
+#seperator{
+	display:inline-block;
+	width:16%;
+}
+#partial{
+	display:inline-block;
+	margin:0 auto;
+	box-sizing:border-box;
+	width:80%;
+}
+#new_head{
+	margin:0 auto;
+	padding:0;
+	box-sizing:border-box;
+	clear: both;
+	width: 100%;
+  margin-left:15px;
+	height: 27px;
+}
+
+.new_input{
+	display: block;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 18px;
+  border-radius: 11px;
+	padding: 5px;
+	border: 1px solid #a1a1a1;
+	}
+#catList {
+  float: right;
+  margin: 0 auto;
+  padding: 0;
+  width: 50%;
+  display: inline-block;
+}
+#catgs_list{
+	margin: 0 auto;
+box-sizing: border-box;
+padding-left: 20px;
+display: inline-block;
+h1{
+	font-size: 30px;
+	font-weight:600;
+	display: inline-block;
+	padding-right: 50px;
+}
+.add_i{
+	font-size: 26px;
+	vertical-align: 0;
+}
+}
+.h1_size{
+	font-size: 26px;
+	color: #B5524A;
+	font-weight: 600;
+	padding-bottom: 10px;
+}
+.empty_width{
+	margin-top:10px;
+	font-size: 18px;
+}
+.icon{
+	float: right;
+	color: #222;
+}
+	.add_catg{
+		border: 1px solid lightgrey;
+		padding: 20px;
+		position: fixed;
+	width: 30%;
+	top: 40%;
+	left: 40%;
+	z-index: 2;
+	background-color:#fff;
+	text-align: center;
+	box-shadow: 5px 5px 5px  #888888;
+	input{
+		width:100%;
+	}
+	}
+
+	.catg_btn{
+		margin-top: 25px;
+	}
+	.list_todo{
+		margin-top: 0px;
+		li{
+			text-align: left;
+			height: 25px;
+			font-size: 22px;
+			padding-bottom: 10px;
+		}
+		a {
+			color: #222;
+		}
+	}
+.list_ul {
+
+	li{
+		text-align: left;
+		height: 25px;
+		font-size: 22px;
+		padding-bottom: 35px;
+	}
+	a {
+		color: #222;
+	}
+}
+.size{
+	font-size: 15px;
+	padding-right: 10px;
+}
+.selected_catg {
+	font-weight: bold;
+	a{
+	color: #B5524A;
+	}
+}
+
+.todos{
+	font-size: 15px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+.search_input{
+	float: right;
+	font-size: 15px;
+	border-radius: 25px 0px 0px 25px;
+	padding: 5px;
+	border: 1px solid #a1a1a1;
+	height: 33px;
+}
+.search_btn{
+	float: right;
+	border-radius:0px 25px 25px 0px;
+	height: 33px;
+	font-size: 17px;
+}
+.search_box{
+	float: right;
+	margin-top: 20px;
+}
+.todo_text{
+	  padding-left: 5px;
+    font-size: 19px;
+}
+.result_head{
+	color: red;
+	font-size: 25px;
+}
+.catg_result{
+		box-sizing:border-box;
+		font-size: 20px;
+		padding-bottom:10px;
+		display: block;
+		padding-top: 5px;
+}
+
+.search_todo{
+	padding-left: 7px;
+}
+.search_ul{
+	margin-top: 10px;
+}
+.close_icon{
+	position: absolute;
+	top: 80px;
+	right: 95px;
+	background-color: transparent;
+	z-index: 2;
+}
+
+.selected {
+    background-color:lightgrey;
+    color:black;
+    font-weight:bold;
+}
+.strikeItem{
+		text-decoration: line-through;
+		color: #006400;
+		}
+		.playedd{
+			text-decoration: line-through;
+		}
+
+h1{
+	font-size: 20px;
+	font-weight:bold;
+	padding-bottom: 20px;
+	color:black;
+}
+.completedlist{
+	height: 50px;
+	border-bottom: 1px solid #808080;
+
+}
+.buttons{
+display: inline-block;
+float:right;
+margin-right: 10%;
+}
+.timer{
+	display: inline-block;
+	float:right;
+	padding-right:2%;
+}
+.list{
+	height: 50px;
+	border-bottom: 1px solid #808080;
+	margin-right:5%;
+	margin-left: 5%;
+	margin-bottom:1%;
+}
+.list:hover{
+	background-color:lightgrey;
+}
+.space{
+	padding-left: 10%;
+	display: inline-block;
+
+}
+ul{
+	margin-top: 5%;
+}
+.fa-times{
+	color:#690707;
+}
+.navbar-inverse{
+	background-color:#222;
+	border: 1px solid grey;
+	height: 50px;
+}
+.header1{
+	height:40px;
+	margin-top:0px;
+	width: 105%;
+	background-color:white;
+	border: 1px solid white;
+}
+
+#site_logo{
+	font-size:20px;
+}
+.navbar-inverse .navbar-nav li  a {
+	color:#4C3F3F;
+	font-weight:bold;
+	border: 1px solid lightgrey;
+    border-radius: 10px;
+    margin-right: 4px;
+}
+.navbar-inverse .navbar-nav li  a:hover{
+    color: black;
+    background-color:grey;
+}
+.navbar-brand{
+	font-weight:bold;
+}
+.sidenav li a{
+	font-weight:bold;
+}
+#side_nav ul li a:hover{
+	background-color:grey;
+}
+#side_nav ul li a{
+	padding-top: 10%;
+    padding-left: 15%;
+    padding-bottom: 10%;
+}
+.navbar-nav{
+	float:right;
+}
+.list_ul{
+	margin-top: 5px;
+}
+
+.no_todo{
+	width: 100%;
+}
+.new_catgory{
+	padding-top: 10px;
+}
+.close_form {
+	float: right;
+	padding-bottom: 10px;
+	background-color: transparent;
+  cursor: pointer;
+}
+.close_form:after {
+	content: "X";
+	display: block;
+	width: 18px;
+	height: 17px;
+	background-color: #337AB7;
+	margin: auto;
+	padding: 2px;
+	border-radius: 50%;
+	text-align: center;
+	color: white;
+	font-weight: normal;
+	font-size: 12px;
+	box-shadow: 0 0 2px #337AB7;
+	cursor: pointer;
+}
+.complted_show{
+	color: #03A9F4;
+	cursor: pointer;
+	float: right;
+}
+.completed_count{
+	font-size: 18px;
+}
+.com_ul{
+	margin-top: 0;
+	padding: 10px;
+}
