@@ -1,10 +1,13 @@
-todoApp.controller('catgListController',function ($scope,$stateParams,getLocalStorage){
+todoApp.controller('catgListController',function ($scope,$state,$stateParams,getLocalStorage){
 	$(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
 });
 	$scope.list=$stateParams.key;
+	if($scope.list == undefined || $scope.list == ""){
+		$state.go('todoList',{});
+			return true;
+	}
 	$scope.todosArray=getLocalStorage.getTodos();
-	console.log($scope.todosArray);
 	$scope.todoform=false;
 	$scope.show=true;
 	$scope.clearForm=function () {

@@ -78,17 +78,9 @@ a:link{
 	clear: both;
 	width: 100%;
   margin-left:15px;
-	h1{
-		font-size: 30px;
-		font-weight:600;
-		display: inline-block;
-		padding-right: 50px;
-	}
-	i{
-		font-size: 26px;
-		vertical-align: 0;
-	}
+	height: 27px;
 }
+
 .new_input{
 	display: block;
   margin: 0;
@@ -110,6 +102,16 @@ a:link{
 box-sizing: border-box;
 padding-left: 20px;
 display: inline-block;
+h1{
+	font-size: 30px;
+	font-weight:600;
+	display: inline-block;
+	padding-right: 50px;
+}
+.add_i{
+	font-size: 26px;
+	vertical-align: 0;
+}
 }
 .h1_size{
 	font-size: 26px;
@@ -191,6 +193,7 @@ display: inline-block;
 	margin-top: 20px;
 }
 .todo_text{
+	  padding-left: 5px;
     font-size: 19px;
 }
 .result_head{
@@ -205,7 +208,10 @@ display: inline-block;
 }
 
 .search_todo{
-	padding-left: 20px;
+	padding-left: 7px;
+}
+.search_ul{
+	margin-top: 10px;
 }
 .close_icon{
 	position: absolute;
@@ -315,7 +321,7 @@ ul{
 	float:right;
 }
 .list_ul{
-	margin-top: 10px;
+	margin-top: 5px;
 }
 //
 // [ui-view].ng-enter, [ui-view].ng-leave {
@@ -366,7 +372,7 @@ ul{
 //   margin-left: 100%;
 // }
 .no_todo{
-	width: 30%;
+	width: 100%;
 }
 .new_catgory{
 	padding-top: 10px;
@@ -400,7 +406,6 @@ ul{
 }
 .completed_count{
 	font-size: 18px;
-	padding: 6px;
 }
 .com_ul{
 	margin-top: 0;

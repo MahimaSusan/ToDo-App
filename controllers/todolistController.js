@@ -1,8 +1,8 @@
 todoApp.controller('todolistController',function ($scope,$state,getLocalStorage){
 	$scope.catgArry=getLocalStorage.getCatgs();
   $scope.selectedRow = null;
-  $scope.setClickedRow = function(index) {
-      $scope.selectedRow = index;
+  $scope.setClickedRow = function(catg) {
+      $scope.selectedRow = catg;
   }
 	$(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();

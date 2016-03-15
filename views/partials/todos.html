@@ -8,7 +8,7 @@
     {{completedTodos.length}}   Completed
   </span>
   <span  ng-click="show=!show" ng-show="show" class="complted_show" data-toggle="tooltip" data-placement="top" title="completed todo">Show</span>
-  <span ng-click="show=!show" ng-hide="show" class="complted_show" data-toggle="tooltip" data-placement="top" title="todos list">ShowList</span>
+  <span ng-click="show=!show" ng-hide="show" class="complted_show">ShowList</span>
   <div ng-hide="show" class="">
     <span ng-if="completedTodos.length == 0 " class="list-group-item list-group-item-warning empty_width">
       No completed todos in {{list}}.
