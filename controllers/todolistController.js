@@ -4,6 +4,9 @@ todoApp.controller('todolistController',function ($scope,$state,getLocalStorage)
   $scope.setClickedRow = function(catg) {
       $scope.selectedRow = catg;
   }
+	$('.cate').on('click', function() {
+			$(this).parent().prepend(this);
+	});
 	$(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
 	});
@@ -23,7 +26,10 @@ todoApp.controller('todolistController',function ($scope,$state,getLocalStorage)
 	}
 	$scope.clear=function () {
 		$scope.searchTodo="";
+		$scope.selectedRow = null;
 		$state.go('todoList',{});
 	}
-
+	$scope.remove=function () {
+		$scope.selectedRow = null;
+	}
 });

@@ -2,7 +2,7 @@
   <div class="search_box">
     <form ng-submit="">
     <a ui-sref="todoList.search({keyword:searchTodo})">
-      <button type="submit" class=" search_btn btn btn-primary"><i class="fa fa-search"></i>
+      <button type="submit" class=" search_btn btn btn-primary" ng-click="remove()" ><i class="fa fa-search"></i>
       </button>
     </a>
     <i class="fa fa-times-circle fa-lg close_icon" ng-click="clear()" ng-show="searchTodo"></i>
@@ -10,7 +10,6 @@
   </form>
   </div>
   <div id="new_head">
-
   </div>
 <div ui-view id="catList"></div>
   <div id="catgs_list" class="categories">
@@ -32,8 +31,8 @@
         Todo list is empty.
     </span>
     <ul class="list_ul">
-        <li class="cate" ng-repeat="catg in catgArry" ng-class="{'selected_catg': selectedRow === catg}" ng-click="setClickedRow(catg)" data-toggle="tooltip" data-placement="left" title="view todos">
-          <a class="catg_list" ui-sref="todoList.catg({key:catg.todoCatg})" >
+        <li class="cate animate_li" ng-repeat="catg in catgArry"  >
+          <a class="catg_list" ui-sref="todoList.catg({key:catg.todoCatg})" ng-class="{'selected_catg': selectedRow === catg}" ng-click="setClickedRow(catg)" title="view todos">
             <i class="fa fa-circle size"></i>{{catg.todoCatg}}
           </a>
         </li>
