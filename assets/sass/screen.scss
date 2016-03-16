@@ -4,12 +4,9 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
-
+@import "variables";
 header{
 	height:51px;
-	img{
-	    margin-top: -10px;
-	}
 }
 body{
 font-family: Adelle,Georgia,serif;
@@ -38,28 +35,26 @@ a:link{
 	top:21px;
 	bottom:0;
 	margin-top: 4%;
-    border-right: 1px solid lightgrey;
-
+  border-right: 1px solid $lightgrey;
 	ul {
     	list-style-type: none;
     	margin: 0;
     	padding: 0;
-
-	li {
-		height:50px;
-	a {
-    	display: block;
-    	color: #222;
-    	padding: 8px 0 8px 16px;
-    	text-decoration: none;
-    	cursor :pointer;
+			li {
+				height:50px;
+				a {
+    			display: block;
+    			color: $black;
+    			padding: 8px 0 8px 16px;
+    			text-decoration: none;
+    			cursor :pointer;
+				}
+				a:hover {
+   		 		background-color: $black;
+   		 		color: $white;
+				}
+	  	}
 		}
-		a:hover {
-   		 background-color: #222;
-   		 color: white;
-			}
-	  }
-	}
 }
 #seperator{
 	display:inline-block;
@@ -88,7 +83,7 @@ a:link{
   font-size: 18px;
   border-radius: 11px;
 	padding: 5px;
-	border: 1px solid #a1a1a1;
+	border: 1px solid $gray;
 	}
 #catList {
   float: right;
@@ -99,25 +94,25 @@ a:link{
 }
 #catgs_list{
 	margin: 0 auto;
-box-sizing: border-box;
-padding-left: 20px;
-display: inline-block;
-width: 50%;
-h1{
-	font-size: 30px;
-	font-weight:600;
+	box-sizing: border-box;
+	padding-left: 20px;
 	display: inline-block;
-	padding-right: 50px;
-}
-.add_i{
-	font-size: 26px;
-	vertical-align: 0;
-	cursor: pointer;
+	width: 50%;
+	h1{
+		font-size: 30px;
+		font-weight:600;
+		display: inline-block;
+		padding-right: 50px;
+	}
+	.add_i{
+		font-size: 26px;
+		vertical-align: 0;
+		cursor: pointer;
 	}
 }
 .h1_size{
 	font-size: 26px;
-	color:rgb(35, 82, 124);
+	color:$navyblue;
 	font-weight: 600;
 	padding-bottom: 10px;
 }
@@ -127,39 +122,39 @@ h1{
 }
 .icon{
 	float: right;
-	color: #222;
+	color: $black;
 	cursor: pointer;
 }
-	.add_catg{
-		border: 1px solid lightgrey;
-		padding: 20px;
-		position: fixed;
+.add_catg{
+	border: 1px solid $lightgrey;
+	padding: 20px;
+	position: fixed;
 	width: 30%;
 	top: 40%;
 	left: 40%;
 	z-index: 2;
-	background-color:#fff;
+	background-color:$white;
 	text-align: center;
-	box-shadow: 5px 5px 5px  #888888;
+	box-shadow: 5px 5px 5px $darkgray;
 	input{
 		width:100%;
 	}
 }
-	.catg_btn{
-		margin-top: 25px;
-	}
-	.list_todo{
-		margin-top: 0px;
-		li{
+.catg_btn{
+	margin-top: 25px;
+}
+.list_todo{
+	margin-top: 0px;
+	li{
 			text-align: left;
 			height: 25px;
 			font-size: 22px;
 			padding-bottom: 10px;
-		}
-		a {
-			color: #222;
-		}
 	}
+	a {
+		color: $black;
+	}
+}
 .list_ul {
 	li{
 		text-align: left;
@@ -169,7 +164,7 @@ h1{
 	}
 }
 .catg_list{
-	color: #222;
+	color: $black;
 }
 .size{
 	font-size: 15px;
@@ -177,9 +172,8 @@ h1{
 }
 .selected_catg {
 	font-weight: bold;
-	color: rgb(35, 82, 124);
+	color: $navyblue;
 }
-
 .todos{
 	font-size: 15px;
 	padding-top: 10px;
@@ -195,7 +189,7 @@ h1{
 	font-size: 15px;
 	border-radius: 25px 0px 0px 25px;
 	padding: 5px;
-	border: 1px solid #a1a1a1;
+	border: 1px solid $gray;
 	height: 33px;
 }
 .search_btn{
@@ -213,7 +207,7 @@ h1{
     font-size: 19px;
 }
 .result_head{
-	color: red;
+	color: $lightred;
 	font-size: 25px;
 }
 .catg_result{
@@ -223,7 +217,6 @@ h1{
 		display: block;
 		padding-top: 5px;
 }
-
 .search_todo{
 	padding-left: 7px;
 }
@@ -238,15 +231,14 @@ h1{
 	z-index: 2;
 	cursor: pointer;
 }
-
 .selected {
-    background-color:lightgrey;
-    color:black;
+    background-color:$lightgrey;
+    color:$black;
     font-weight:bold;
 }
 .strikeItem{
 		text-decoration: line-through;
-		color: #006400;
+		color:$darkgreen;
 		}
 		.playedd{
 			text-decoration: line-through;
@@ -256,17 +248,16 @@ h1{
 	font-size: 20px;
 	font-weight:bold;
 	padding-bottom: 20px;
-	color:black;
+	color:$black;
 }
 .completedlist{
 	height: 50px;
 	border-bottom: 1px solid #808080;
-
 }
 .buttons{
-display: inline-block;
-float:right;
-margin-right: 10%;
+	display: inline-block;
+	float:right;
+	margin-right: 10%;
 }
 .timer{
 	display: inline-block;
@@ -275,51 +266,46 @@ margin-right: 10%;
 }
 .list{
 	height: 50px;
-	border-bottom: 1px solid #808080;
+	border-bottom: 1px solid $grey;
 	margin-right:5%;
 	margin-left: 5%;
 	margin-bottom:1%;
 }
 .list:hover{
-	background-color:lightgrey;
+	background-color:$lightgrey;
 }
 .space{
 	padding-left: 10%;
 	display: inline-block;
-
 }
 ul{
 	margin-top: 5%;
 }
-.fa-times{
-	color:#690707;
-}
 .navbar-inverse{
-	background-color:#222;
-	border: 1px solid grey;
+	background-color:$black;
+	border: 1px solid $grey;
 	height: 50px;
 }
 .header1{
 	height:40px;
 	margin-top:0px;
 	width: 105%;
-	background-color:white;
-	border: 1px solid white;
+	background-color:$white;
+	border: 1px solid $white;
 }
-
 #site_logo{
 	font-size:20px;
 }
 .navbar-inverse .navbar-nav li  a {
-	color:#4C3F3F;
+	color:$darksilver;
 	font-weight:bold;
-	border: 1px solid lightgrey;
-    border-radius: 10px;
-    margin-right: 4px;
+	border: 1px solid $lightgrey;
+  border-radius: 10px;
+  margin-right: 4px;
 }
 .navbar-inverse .navbar-nav li  a:hover{
-    color: black;
-    background-color:grey;
+    color: $black;
+    background-color:$grey;
 }
 .navbar-brand{
 	font-weight:bold;
@@ -328,12 +314,12 @@ ul{
 	font-weight:bold;
 }
 #side_nav ul li a:hover{
-	background-color:grey;
+	background-color:$grey;
 }
 #side_nav ul li a{
 	padding-top: 10%;
-    padding-left: 15%;
-    padding-bottom: 10%;
+  padding-left: 15%;
+  padding-bottom: 10%;
 }
 .navbar-nav{
 	float:right;
@@ -341,7 +327,6 @@ ul{
 .list_ul{
 	margin-top: 5px;
 }
-
 .no_todo{
 	width: 100%;
 }
@@ -359,19 +344,19 @@ ul{
 	display: block;
 	width: 18px;
 	height: 17px;
-	background-color: #337AB7;
+	background-color: $blue;
 	margin: auto;
 	padding: 2px;
 	border-radius: 50%;
 	text-align: center;
-	color: white;
+	color: $white;
 	font-weight: normal;
 	font-size: 12px;
-	box-shadow: 0 0 2px #337AB7;
+	box-shadow: 0 0 2px $blue;
 	cursor: pointer;
 }
 .complted_show{
-	color: #03A9F4;
+	color: $lightblue;
 	cursor: pointer;
 	float: right;
 }
@@ -391,20 +376,16 @@ ul{
 .animate_li.ng-enter {
   -webkit-transition: 1s;
   transition: 1s;
-
   margin-left: 100%;
 }
-
 .animate_li.ng-enter-active {
   margin-left: 0;
 }
-
 .animate_li.ng-leave {
   -webkit-transition: 1s;
   transition: 1s;
   margin-left: 0;
 }
-
 .animate_li.ng-leave-active {
   margin-left: 200%;
 }
