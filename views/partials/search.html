@@ -4,9 +4,9 @@
     No results found..
   </span>
   <ul class="search_ul">
-    <li ng-repeat="todo in results">
+    <li class="animate_li" ng-repeat="todo in results">
       <span class="catg_result">{{todo.todoCatg}}</span>
-      <i class="fa fa-dot-circle-o"></i><span class="todo_text">{{todo.text}}</span>
+      <i class="fa fa-dot-circle-o search_todo"></i><span class="todo_text">{{todo.text}}</span>
     </li>
   </ul>
 </div>

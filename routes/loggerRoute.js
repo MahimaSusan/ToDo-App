@@ -1,5 +1,4 @@
 todoApp.config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise("/activity_logger");
     $stateProvider.state('activity_logger', {
         url: "/activity_logger",
         templateUrl: "./partials/todoLogger.html",

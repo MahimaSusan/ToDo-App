@@ -70,7 +70,6 @@ a:link{
 	margin:0 auto;
 	box-sizing:border-box;
 	width:80%;
-	position: fixed;
 }
 #new_head{
 	margin:0 auto;
@@ -79,11 +78,9 @@ a:link{
 	clear: both;
 	width: 100%;
   margin-left:15px;
-	h1{
-		font-size: 30px;
-		font-weight:600;
-	}
+	height: 27px;
 }
+
 .new_input{
 	display: block;
   margin: 0;
@@ -99,22 +96,30 @@ a:link{
   padding: 0;
   width: 50%;
   display: inline-block;
-  margin-top: 32px;
 }
 #catgs_list{
 	margin: 0 auto;
 box-sizing: border-box;
-padding: 10px;
-margin-top: 25px;
+padding-left: 20px;
 display: inline-block;
-height: 420px;
-width: 30%;
-// border-right: 1px solid lightgrey;
+width: 50%;
+h1{
+	font-size: 30px;
+	font-weight:600;
+	display: inline-block;
+	padding-right: 50px;
+}
+.add_i{
+	font-size: 26px;
+	vertical-align: 0;
+	cursor: pointer;
+	}
 }
 .h1_size{
 	font-size: 26px;
-	color: #B5524A;
+	color:rgb(35, 82, 124);
 	font-weight: 600;
+	padding-bottom: 10px;
 }
 .empty_width{
 	margin-top:10px;
@@ -123,24 +128,48 @@ width: 30%;
 .icon{
 	float: right;
 	color: #222;
+	cursor: pointer;
 }
 	.add_catg{
 		border: 1px solid lightgrey;
 		padding: 20px;
-		margin: 22px;
+		position: fixed;
+	width: 30%;
+	top: 40%;
+	left: 40%;
+	z-index: 2;
+	background-color:#fff;
+	text-align: center;
+	box-shadow: 5px 5px 5px  #888888;
+	input{
+		width:100%;
 	}
-
+}
 	.catg_btn{
 		margin-top: 25px;
 	}
-.catg_list {
+	.list_todo{
+		margin-top: 0px;
+		li{
+			text-align: left;
+			height: 25px;
+			font-size: 22px;
+			padding-bottom: 10px;
+		}
+		a {
+			color: #222;
+		}
+	}
+.list_ul {
 	li{
 		text-align: left;
 		height: 25px;
 		font-size: 22px;
 		padding-bottom: 35px;
-		color: #222;
 	}
+}
+.catg_list{
+	color: #222;
 }
 .size{
 	font-size: 15px;
@@ -148,20 +177,19 @@ width: 30%;
 }
 .selected_catg {
 	font-weight: bold;
-	li{
-		color: #B5524A;
-	}
+	color: rgb(35, 82, 124);
 }
-.new_catgory{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
+
 .todos{
 	font-size: 15px;
 	padding-top: 10px;
+	padding-bottom: 15px;
 }
-
+.com_todos{
+	font-size: 15px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
 .search_input{
 	float: right;
 	font-size: 15px;
@@ -181,8 +209,8 @@ width: 30%;
 	margin-top: 20px;
 }
 .todo_text{
+	  padding-left: 5px;
     font-size: 19px;
-		margin-left: 10px;
 }
 .result_head{
 	color: red;
@@ -191,21 +219,24 @@ width: 30%;
 .catg_result{
 		box-sizing:border-box;
 		font-size: 20px;
-		padding-bottom:  10px;
+		padding-bottom:10px;
 		display: block;
+		padding-top: 5px;
+}
+
+.search_todo{
+	padding-left: 7px;
 }
 .search_ul{
-		padding-top: 15px;
-		li{
-				padding: 11px;
-		}
+	margin-top: 10px;
 }
 .close_icon{
 	position: absolute;
-	top: 29px;
-	right: 46px;
+	top: 80px;
+	right: 95px;
 	background-color: transparent;
 	z-index: 2;
+	cursor: pointer;
 }
 
 .selected {
@@ -308,11 +339,72 @@ ul{
 	float:right;
 }
 .list_ul{
-	margin-top: 0px;
+	margin-top: 5px;
+}
+
+.no_todo{
+	width: 100%;
+}
+.new_catgory{
+	padding-top: 10px;
+}
+.close_form {
+	float: right;
+	padding-bottom: 10px;
+	background-color: transparent;
+  cursor: pointer;
+}
+.close_form:after {
+	content: "X";
+	display: block;
+	width: 18px;
+	height: 17px;
+	background-color: #337AB7;
+	margin: auto;
+	padding: 2px;
+	border-radius: 50%;
+	text-align: center;
+	color: white;
+	font-weight: normal;
+	font-size: 12px;
+	box-shadow: 0 0 2px #337AB7;
+	cursor: pointer;
+}
+.complted_show{
+	color: #03A9F4;
+	cursor: pointer;
+	float: right;
+}
+.completed_count{
+	font-size: 18px;
+}
+.com_ul{
+	margin-top: 0;
+	padding: 10px;
 }
 .show_animate{
-	 transition:all linear 0.8s;
+	 transition:all linear 0.5s;
 }
 .show_animate.ng-hide {
   opacity:0;
+}
+.animate_li.ng-enter {
+  -webkit-transition: 1s;
+  transition: 1s;
+
+  margin-left: 100%;
+}
+
+.animate_li.ng-enter-active {
+  margin-left: 0;
+}
+
+.animate_li.ng-leave {
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin-left: 0;
+}
+
+.animate_li.ng-leave-active {
+  margin-left: 200%;
 }

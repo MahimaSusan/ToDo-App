@@ -1,32 +1,35 @@
 todoApp.controller('todolistController',function ($scope,$state,getLocalStorage){
 	$scope.catgArry=getLocalStorage.getCatgs();
-	$scope.empty=false;
   $scope.selectedRow = null;
-  $scope.setClickedRow = function(index) {
-      $scope.selectedRow = index;
+  $scope.setClickedRow = function(catg) {
+      $scope.selectedRow = catg;
   }
-	// $('.catg_list').on('click', function() {
-	// 		$(this).parent().prepend(this);
-	// });
-
-	if ($scope.catgArry == ""){
-		$scope.empty=true;
-	}
+	$('.cate').on('click', function() {
+			$(this).parent().prepend(this);
+	});
+	$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+	});
 	$scope.newtodos=false;
-	$scope.add=function () {
+	$scope.clearForm=function () {
 		$scope.newtodos=!$scope.newtodos;
+		$scope.todoCatg="";
 	}
 	$scope.addCatg=function () {
-		if($scope.todoCatg == undefined){
+		if($scope.todoCatg == undefined || $scope.todoCatg == ""){
     	    	return true;
     }
-		$scope.catgArry.push({todoCatg:$scope.todoCatg});
+		$scope.catgArry.unshift({todoCatg:$scope.todoCatg});
 		getLocalStorage.updateCatg($scope.catgArry);
+		$scope.newtodos=!$scope.newtodos;
 		$scope.todoCatg="";
-		location.reload();
 	}
 	$scope.clear=function () {
 		$scope.searchTodo="";
-		$state.go('todoList.search',{keyword:''});
+		$scope.selectedRow = null;
+		$state.go('todoList',{});
+	}
+	$scope.remove=function () {
+		$scope.selectedRow = null;
 	}
 });

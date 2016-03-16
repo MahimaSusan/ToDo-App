@@ -1,23 +1,46 @@
 <div>
-  <h3 class="h1_size ">{{list}}
-    <i class="fa fa-plus-circle icon" ng-click="todoForm()" title="click to add new todo">
+  <div>
+  <h3 class="h1_size ">{{category}}
+    <i class="fa fa-plus-circle icon" ng-click="todoform=!todoform" data-toggle="tooltip" data-placement="top" title="add new todo">
     </i>
   </h3>
-  <span class="list-group-item list-group-item-warning empty_width" ng-show="empty">
-    No todos in {{list}}.
+  <span class="completed_count">
+    {{completedTodos.length}}   Completed
   </span>
-  <div>
-    <ul class="list_ul">
-      <li class="todos " ng-repeat="todo in catgtodos ">
-        <i class="fa fa-dot-circle-o"></i>
+  <span  ng-click="show=!show" ng-show="show" class="complted_show" data-toggle="tooltip" data-placement="top" title="completed todos">Show</span>
+  <span ng-click="show=!show" ng-hide="show" class="complted_show">ShowList</span>
+  <div ng-hide="show" class="">
+    <span ng-if="completedTodos.length <= 0 " class="list-group-item list-group-item-warning empty_width">
+      No completed todos in {{category}}.
+    </span>
+    <ul class="com_ul">
+      <li class="com_todos animate_li" ng-repeat="todo in  completedTodos = (todosArray | compltdFilter: category)">
+        <input type="checkbox" ng-checked="todo.completed"  ng-click="changeTodo()"></input>
         <span class="todo_text">{{ todo.text }}</span>
       </li>
     </ul>
   </div>
+    <div ng-show="show">
+      <span ng-if="notcompletedTodos.length <= 0" class="list-group-item list-group-item-warning empty_width">
+      No new todos in {{category}}.
+      </span>
+      <ul class="list_todo" >
+
+        <li class="todos animate_li" ng-repeat="todo in notcompletedTodos = (todosArray | categFilter: category)">
+            <input type="checkbox" ng-checked="todo.completed"  ng-click="changeTodo()"></input>
+						<span class="todo_text">{{ todo.text }}</span>
+        </li>
+      </ul>
+    </div>
+    <notification></notification>
+  </div>
   <div class="add_catg show_animate" ng-show="todoform">
-    <input class="new_input" type="text" ng-model="newTodo" placeholder="Enter todo" required/>
-    <button ng-click="addtodo()" class="btn btn-primary catg_btn">
-      addtodo
-    </button>
+    <span class="close_form" ng-click="clearForm()"></span>
+    <form ng-submit="addtodo()">
+      <input class="new_input" type="text" ng-model="newTodo" placeholder="Enter todo" autofocus="true" required/>
+      <button type="submit" class="btn btn-primary catg_btn">
+        submit
+      </button>
+    </form>
   </div>
 </div>

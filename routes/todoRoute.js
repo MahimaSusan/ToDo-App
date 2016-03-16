@@ -1,9 +1,6 @@
 todoApp.config(function($stateProvider, $urlRouterProvider){
-
-      $urlRouterProvider.otherwise("/todolist")
-
-      $stateProvider
-        .state('todoList', {
+      $urlRouterProvider.otherwise("/todolist");
+      $stateProvider.state('todoList', {
             url: "/todolist",
             templateUrl: "./partials/todoList.html",
             controller:'todolistController'
@@ -11,16 +8,10 @@ todoApp.config(function($stateProvider, $urlRouterProvider){
         .state('todoList.catg',{
           	url: "/:key",
           	templateUrl:"./partials/todos.html",
-           	controller:'catgListController',
-            resolve:{
-              	catgList: function(catglistSrv,$stateParams){
-               			// 	var catg=catglistSrv.getCatgs($stateParams.key);                    
-              				return catglistSrv.getCatgs($stateParams.key);
-            			}
-           }
+           	controller:'catgListController'
         })
         .state('todoList.search',{
-          	url: "/:keyword",
+          	url: "/search/:keyword",
           	templateUrl:"./partials/search.html",
            	controller:'searchController'
         })
