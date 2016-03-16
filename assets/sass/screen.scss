@@ -144,8 +144,7 @@ h1{
 	input{
 		width:100%;
 	}
-	}
-
+}
 	.catg_btn{
 		margin-top: 25px;
 	}
@@ -162,7 +161,6 @@ h1{
 		}
 	}
 .list_ul {
-
 	li{
 		text-align: left;
 		height: 25px;
@@ -173,25 +171,13 @@ h1{
 .catg_list{
 	color: #222;
 }
-// .catg_list:hover{
-// 	color: #B5524A;
-// }
-// .catg_list:active{
-// 	color: #B5524A;
-// }
-// .catg_list:visited{
-// 	color: #B5524A;
-// }
-
 .size{
 	font-size: 15px;
 	padding-right: 10px;
 }
 .selected_catg {
 	font-weight: bold;
-
 	color: rgb(35, 82, 124);
-
 }
 
 .todos{

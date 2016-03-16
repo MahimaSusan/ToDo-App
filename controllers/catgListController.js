@@ -36,5 +36,9 @@ todoApp.controller('catgListController',function ($scope,$state,$stateParams,get
 	$scope.changeTodo=function () {
 		this.todo.completed= !this.todo.completed;
 		getLocalStorage.updateTodos($scope.todosArray);
+		if (this.todo.completed == true) {
+			$scope.$broadcast('notification', {type: 'primary', msg:'sucessfully completed todo'});
+		}
 	}
+
 });

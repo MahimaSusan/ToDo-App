@@ -25,12 +25,14 @@
       No new todos in {{category}}.
       </span>
       <ul class="list_todo" >
+
         <li class="todos animate_li" ng-repeat="todo in notcompletedTodos = (todosArray | categFilter: category)">
             <input type="checkbox" ng-checked="todo.completed"  ng-click="changeTodo()"></input>
 						<span class="todo_text">{{ todo.text }}</span>
         </li>
       </ul>
     </div>
+    <notification></notification>
   </div>
   <div class="add_catg show_animate" ng-show="todoform">
     <span class="close_form" ng-click="clearForm()"></span>
