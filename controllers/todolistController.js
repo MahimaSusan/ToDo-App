@@ -1,6 +1,13 @@
 todoApp.controller('todolistController',function ($scope,$state,getLocalStorage){
 	$scope.catgArry=getLocalStorage.getCatgs();
   $scope.selectedRow = null;
+	$scope.class="search_box";
+	$scope.changeClass = function(){
+    if ($scope.class === "search_box")
+      $scope.class = "search_show";
+    else
+      $scope.class = "search_box";
+  };
   $scope.setClickedRow = function(catg) {
       $scope.selectedRow = catg;
   }

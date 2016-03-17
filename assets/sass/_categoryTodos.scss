@@ -1,0 +1,158 @@
+.h1_size{
+	font-size: 26px;
+	color:$navyblue;
+	font-weight: 600;
+	padding-bottom: 10px;
+}
+.icon{
+	float: right;
+	color: $black;
+	cursor: pointer;
+}
+.list_todo{
+	margin-top: 0px;
+	li{
+			text-align: left;
+			height: 25px;
+			font-size: 22px;
+			padding-bottom: 10px;
+	}
+	a {
+		color: $black;
+	}
+}
+// .completed_count{
+// 	font-size: 18px;
+// }
+.complted_show{
+	color: $lightblue;
+	cursor: pointer;
+	float: right;
+}
+.com_ul{
+	margin-top: 0;
+	padding: 10px;
+}
+.com_todos{
+	font-size: 15px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+.todos{
+	font-size: 15px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+.todo_text{
+	  padding-left: 5px;
+    // font-size: 19px;
+}
+.check_box {
+  width: 20px;
+  position: relative;
+  margin: 20px auto;
+	display: inline-block;
+  label {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fcfff4;
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    border-radius: 4px;
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    &:after {
+      content: '';
+      width: 9px;
+      height: 5px;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      border: 3px solid #333;
+      border-top: none;
+      border-right: none;
+      background: transparent;
+      opacity: 0;
+      transform: rotate(-45deg);
+    }
+    &:hover::after {
+      opacity: 0.5;
+    }
+  }
+  input[type=checkbox] {
+    visibility: hidden;
+    &:checked + label:after {
+      opacity: 1;
+    }
+  }
+}
+	.checked_box {
+	  width: 20px;
+	  position: relative;
+	  margin: 20px auto;
+		display: inline-block;
+	  label {
+	    width: 20px;
+	    height: 20px;
+	    cursor: pointer;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    background: #fcfff4;
+	    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	    border-radius: 4px;
+	    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	    &:after {
+	      content: '';
+	      width: 9px;
+	      height: 5px;
+	      position: absolute;
+	      top: 4px;
+	      left: 4px;
+	      border: 3px solid #333;
+	      border-top: none;
+	      border-right: none;
+	      background: transparent;
+	      opacity: 0;
+	      transform: rotate(-45deg);
+	    }
+	    &:hover::after {
+	      opacity: 0.5;
+	    }
+	  }
+	  input[type=checkbox] {
+	    visibility: hidden;
+	    &:checked + label:after {
+	      opacity: 1;
+	    }
+	  }
+}
+@media screen and (min-width:320px){
+	.h1_size{
+		font-size: 32px;
+	}
+	.completed_count{
+		font-size: 22px;
+	}
+	.complted_show{
+		font-size: 22px;
+	}
+	.tooltipsize + .tooltip > .tooltip-inner {
+    font-size:13px;
+  }
+	.empty_width{
+		margin-top:10px;
+		font-size: 22px;
+	}
+	.todos{
+		font-size: 25px;
+	}
+	.check_box{
+		font-size: 20px;
+	}
+	.todo_text{
+	    font-size: 25px;
+	}
+}

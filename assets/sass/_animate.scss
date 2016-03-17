@@ -1,0 +1,22 @@
+.show_animate{
+	 transition:all linear 0.5s;
+}
+.show_animate.ng-hide {
+  opacity:0;
+}
+.animate_li.ng-enter {
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin-left: 100%;
+}
+.animate_li.ng-enter-active {
+  margin-left: 0;
+}
+.animate_li.ng-leave {
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin-left: 0;
+}
+.animate_li.ng-leave-active {
+  margin-left: 200%;
+}

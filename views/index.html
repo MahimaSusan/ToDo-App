@@ -4,6 +4,7 @@
         <title>
             ToDo-App
         </title>
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0", user-scalable=no" />
         <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'/>
         <link rel="stylesheet" type="text/css" href="../assets/styleSheets/bootstrap.css"/>
         <link rel="stylesheet" type="text/css" href="../assets/styleSheets/font-awesome-4.5.0/css/font-awesome.min.css">
@@ -25,7 +26,7 @@
         <script type="text/javascript" src="../assets/js/lib/underscore-min.js">
         </script>
         <link rel="shortcut icon" href="../assets/images/todoicon.jpeg" type="image/x-icon" />
-          <script type="text/javascript" src="../assets/js/lib/ng-notification.js"></script>
+        <script type="text/javascript" src="../assets/js/lib/ng-notification.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
     </head>
     <body>
@@ -34,18 +35,29 @@
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a class="navbar-brand" id="site_logo" href="#">
-                           <b>Todo App</b>
+                           Todo App
                         </a>
                     </div>
                 </div>
             </nav>
-        </header>
-       <div id="side_nav">
-       	 <ul class="sidenav">
-       		  <li><a ui-sref="todoList">ToDo List</a></li>
-  			    <li><a ui-sref="activity_logger">Activity Logger</a></li>
-		     </ul>
-       </div>
+            <div id="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+            </div>
+            <nav id="drawer">
+                <ul>
+                  <li ><a id="todo" ui-sref="todoList">ToDo List</a></li>
+                  <li ><a id="log" ui-sref="activity_logger">Activity Logger</a></li>
+                </ul>
+            </nav>
+            <div id="side_nav">
+       	      <ul class="sidenav">
+       		       <li><a ui-sref="todoList">ToDo List</a></li>
+  			         <li><a ui-sref="activity_logger">Activity Logger</a></li>
+		          </ul>
+            </div>
+       </header>
        <div id="seperator">
        </div>
        <div ui-view id="partial"></div>
@@ -63,5 +75,19 @@
         <script type="text/javascript" src="../directives/timerDirective.js"></script>
         <script type="text/javascript" src="../filters/customFilter.js"></script>
         <script type="text/javascript" src="../filters/completedFilter.js"></script>
+        <script>
+        document.getElementById('hamburger').addEventListener('click', drawer, false);
+        function drawer() {
+          document.getElementById('drawer').classList.toggle('drawer_left');
+        }
+        document.getElementById('todo').addEventListener('click', drawerLeft, false);
+        function drawerLeft() {
+          document.getElementById('drawer').classList.remove('drawer_left');
+        }
+        document.getElementById('log').addEventListener('click', drawerLeft, false);
+        function drawerLeft() {
+          document.getElementById('drawer').classList.remove('drawer_left');
+        }
+        </script>
     </body>
 </html>

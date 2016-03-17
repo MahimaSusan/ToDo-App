@@ -1,31 +1,32 @@
 <div>
-  <div class="search_box">
+  <div class="search_box search_show" ng-class="class">
+    <i class="fa fa-times close_search" ng-click="changeClass()"></i>
     <form ng-submit="">
-    <a ui-sref="todoList.search({keyword:searchTodo})">
-      <button type="submit" class=" search_btn btn btn-primary" ng-click="remove()" ><i class="fa fa-search"></i>
-      </button>
-    </a>
-    <i class="fa fa-times-circle fa-lg close_icon" ng-click="clear()" ng-show="searchTodo"></i>
-    <input class="search_input" type="text" ng-model="searchTodo" placeholder="search"/>
-  </form>
+      <a ui-sref="todoList.search({keyword:searchTodo})">
+        <button type="submit" class="search_btn btn btn-primary" ng-click="remove()" ><i class="fa fa-search"></i>
+        </button>
+      </a>
+      <i class="fa fa-times-circle fa-lg close_icon" ng-click="clear()" ng-show="searchTodo"></i>
+      <input class="search_input" type="text" ng-model="searchTodo" placeholder="search"/>
+    </form>
   </div>
   <div id="new_head">
   </div>
-<div ui-view id="catList"></div>
-  <div id="catgs_list" class="categories">
+  <div id="todo_list" class="categories">
+    <i class="fa fa-search search tooltipsize" ng-click="changeClass()" data-toggle="tooltip" data-placement="top" title="search todos"></i>
     <h1>
-        Todo List
+        <a ui-sref="todoList">ToDo List</a>
     </h1>
-    <i class="fa fa-plus-circle fa-lg add_i"  ng-click="newtodos=!newtodos" data-toggle="tooltip" data-placement="top" title="add category">
+    <i class="fa fa-plus-circle fa-lg add_i tooltipsize"  ng-click="newtodos=!newtodos" data-toggle="tooltip" data-placement="top" title="add category">
     </i>
     <div class="add_catg show_animate" ng-show="newtodos">
       <span class="close_form" ng-click="clearForm()"></span>
       <form ng-submit="addCatg()">
-      <input class="new_input" type="text" ng-model="todoCatg" placeholder="Enter todo category" autofocus="true" required/>
-      <button  type="submit" class="btn btn-primary catg_btn">
+        <input class="new_input" type="text" ng-model="todoCatg" placeholder="Enter todo category" autofocus="true" required/>
+        <button  type="submit" class="btn btn-primary catg_btn">
           submit
-      </button>
-    </form>
+        </button>
+      </form>
     </div>
     <span class="list-group-item  empty_width no_todo" ng-if="catgArry.length == 0 ">
         Todo list is empty.
@@ -38,4 +39,5 @@
         </li>
     </ul>
   </div>
+  <div ui-view id="catList"></div>
 </div>

@@ -1,13 +1,13 @@
 <div>
   <div>
   <h3 class="h1_size ">{{category}}
-    <i class="fa fa-plus-circle icon" ng-click="todoform=!todoform" data-toggle="tooltip" data-placement="top" title="add new todo">
+    <i class="fa fa-plus-circle icon tooltipsize" ng-click="todoform=!todoform" data-toggle="tooltip" data-placement="top" title="add new todo">
     </i>
   </h3>
   <span class="completed_count">
     {{completedTodos.length}}   Completed
   </span>
-  <span  ng-click="show=!show" ng-show="show" class="complted_show" data-toggle="tooltip" data-placement="top" title="completed todos">Show</span>
+  <span  ng-click="show=!show" ng-show="show" class="complted_show tooltipsize" data-toggle="tooltip" data-placement="top" title="completed todos">Show</span>
   <span ng-click="show=!show" ng-hide="show" class="complted_show">ShowList</span>
   <div ng-hide="show" class="">
     <span ng-if="completedTodos.length <= 0 " class="list-group-item list-group-item-warning empty_width">
@@ -15,7 +15,11 @@
     </span>
     <ul class="com_ul">
       <li class="com_todos animate_li" ng-repeat="todo in  completedTodos = (todosArray | compltdFilter: category)">
-        <input type="checkbox" ng-checked="todo.completed"  ng-click="changeTodo()"></input>
+        <div class="checked_box">
+          <input type="checkbox" ng-checked="todo.completed"  ng-click="changeTodo()" value="None" id="checked_box" name="check" />
+          <label for="checked_box"></label>
+        </div>
+        <!-- <input type="checkbox" ng-checked="todo.completed"  ng-click="changeTodo()"></input> -->
         <span class="todo_text">{{ todo.text }}</span>
       </li>
     </ul>
@@ -25,9 +29,12 @@
       No new todos in {{category}}.
       </span>
       <ul class="list_todo" >
-
         <li class="todos animate_li" ng-repeat="todo in notcompletedTodos = (todosArray | categFilter: category)">
-            <input type="checkbox" ng-checked="todo.completed"  ng-click="changeTodo()"></input>
+          <div class="check_box">
+            <input type="checkbox" ng-checked="todo.completed"  ng-click="changeTodo()" value="None" id="check_box" name="check" />
+            <label for="check_box"></label>
+          </div>
+            <!-- <input type="checkbox" ng-checked="todo.completed"  ng-click="changeTodo()"></input> -->
 						<span class="todo_text">{{ todo.text }}</span>
         </li>
       </ul>
